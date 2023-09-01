@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 # wrapper script for waybar with args, see https://github.com/swaywm/sway/issues/5724
 
-USER_CONFIG_PATH=$HOME/.config/sway/waybar/config.jsonc
-USER_STYLE_PATH=$HOME/.config/sway/waybar/style.css
+USER_CONFIG_PATH="${HOME}/.config/sway/waybar/config.jsonc"
+USER_STYLE_PATH="${HOME}/.config/sway/waybar/style.css"
 
 if [ -f "$USER_CONFIG_PATH" ]; then
     USER_CONFIG=$USER_CONFIG_PATH

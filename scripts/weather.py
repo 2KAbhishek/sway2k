@@ -84,14 +84,12 @@ WWO_CODE = {
 }
 
 data = {}
-city = ""
+city = "Rampurhat"
 temperature = "C"
 distance = "km"
+use_imperial=False
 
-if os.environ['LC_MEASUREMENT']:
-    current_locale = os.environ['LC_MEASUREMENT'].split('.')[0]
-
-if current_locale == "en_US":
+if use_imperial:
     temperature = "F"
     distance = "miles"
 
@@ -101,7 +99,7 @@ long_options = ["temperature=", "city=", "distance="]
 
 try:
     args, values = getopt.getopt(argumentList, options, long_options)
-     
+
     for currentArgument, currentValue in args:
         if currentArgument in ("-t", "--temperature"):
             temperature = currentValue[0].upper()
@@ -114,8 +112,8 @@ try:
                 raise Exception("distance unit is neither km, nor miles", distance)
 
         else:
-            city = urllib.parse.quote(currentValue)            
-  
+            city = urllib.parse.quote(currentValue)
+
 except getopt.error as err:
     print (str(err))
     exit(1)

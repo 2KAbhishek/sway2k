@@ -4,11 +4,12 @@ import glob
 import re
 from typing import Text
 import json
+import os
 
 if len(sys.argv) >= 2:
     rootPath = sys.argv[1]
 else:
-    rootPath = '/etc/sway/config'
+    rootPath = os.path.expanduser('~') '/.config/sway/config'
 
 
 def readFile(filePath):

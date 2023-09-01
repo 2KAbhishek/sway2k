@@ -11,22 +11,21 @@ set $theme $HOME/.config/sway/themes/matcha-green
 include $theme/definitions
 
 # global variables
-include $HOME/.config/sway/definitions
+include $HOME/.config/sway/config.d/definitions.conf
 
-# user variables
-# include $HOME/.config/sway/definitions.d/*.conf
-
-include $HOME/.config/sway/inputs/*
-include $HOME/.config/sway/outputs/*
+# io configs
+include $HOME/.config/sway/config.d/inputs/*
+include $HOME/.config/sway/config.d/outputs/*
 
 # enable modes
-include $HOME/.config/sway/modes/*
+include $HOME/.config/sway/config.d/modes/*
+
+# include additional configs e.g. to autostart applications
+include $HOME/.config/sway/config.d/system/*
+
+# user variables
+include $HOME/.config/sway/config.d/user.conf
 
 # only enable this if every app you use is compatible with wayland
 # xwayland disable
 
-# include additional configs e.g. to autostart applications
-include $HOME/.config/sway/config.d/*
-
-# user config
-# include $HOME/.config/sway/config.d/*.conf

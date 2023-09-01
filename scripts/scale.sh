@@ -2,7 +2,7 @@
 current_screen=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused==true) | .name')
 increment=0.5
 
-current_scale() { 
+current_scale() {
     swaymsg -t get_outputs | jq -r '.[] | select(.focused==true) | .scale'
 }
 

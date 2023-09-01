@@ -3,7 +3,7 @@
 current_abs=$(light -Gr)
 current_rel() {
     echo "($(light -G) + 0.5) / 1" | bc
-} 
+}
 max=$(light -Mr)
 factor=3
 brightness_step=$((max * factor / 100 < 1 ? 1 : max * factor / 100))

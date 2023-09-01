@@ -203,7 +203,7 @@
             "one": "󰖯",
             "many": "󰖲"
         },
-        "exec": "/bin/sh /usr/share/sway/scripts/scratchpad.sh",
+        "exec": "/bin/sh $HOME/.config/sway/scripts/scratchpad.sh",
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },
@@ -217,9 +217,9 @@
             "on": "󰌵",
             "off": "󰌶"
         },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
-        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
-        "exec-if": "/usr/share/sway/scripts/sunset.sh check",
+        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/sway/scripts/sunset.sh",
+        "on-click": "$HOME/.config/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "exec-if": "$HOME/.config/sway/scripts/sunset.sh check",
         "signal": 6
     },
 
@@ -280,7 +280,7 @@
         "tooltip": true,
         "interval": 3600,
         // accepts -c/--city <city> -t/--temperature <C/F> -d/--distance <km/miles>
-        "exec": "/usr/share/sway/scripts/weather.py",
+        "exec": "$HOME/.config/sway/scripts/weather.py",
         "return-type": "json",
         "format-icons": {
             "Unknown": "",
@@ -313,8 +313,8 @@
             "tracking": "󰖷",
             "stopped": "󰋣"
         },
-        "exec": "/bin/sh /usr/share/sway/scripts/zeit.sh status",
-        "on-click": "/bin/sh /usr/share/sway/scripts/zeit.sh click; pkill -RTMIN+10 waybar",
+        "exec": "/bin/sh $HOME/.config/sway/scripts/zeit.sh status",
+        "on-click": "/bin/sh $HOME/.config/sway/scripts/zeit.sh click; pkill -RTMIN+10 waybar",
         "exec-if": "[ -x \"$(command -v zeit)\" ]",
         "signal": 10
     },
@@ -342,9 +342,9 @@
             "on": "󰃡",
             "off": "󰃠"
         },
-        "exec": "/usr/share/sway/scripts/wluma.sh",
-        "on-click": "/usr/share/sway/scripts/wluma.sh toggle; pkill -RTMIN+12 waybar",
-        "exec-if": "/usr/share/sway/scripts/wluma.sh check",
+        "exec": "$HOME/.config/sway/scripts/wluma.sh",
+        "on-click": "$HOME/.config/sway/scripts/wluma.sh toggle; pkill -RTMIN+12 waybar",
+        "exec-if": "$HOME/.config/sway/scripts/wluma.sh check",
         "signal": 12
     }
 }

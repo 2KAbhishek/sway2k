@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # theme variables
-set $theme $HOME/.config/sway/config.d/theme.conf
+include $HOME/.config/sway/config.d/theme.conf
 
 # global variables
 include $HOME/.config/sway/config.d/definitions.conf

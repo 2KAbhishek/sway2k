@@ -176,7 +176,7 @@
     },
 
     "custom/menu": {
-        "format": "",
+        "format": "",
         "on-click": "swaymsg exec \\$menu",
         "tooltip": false
     },

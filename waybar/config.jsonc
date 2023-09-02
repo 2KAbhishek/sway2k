@@ -127,7 +127,7 @@
     },
 
     "backlight": {
-        "format": "{icon} {percent}%",
+        "format": "{percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-scroll-up": "swaymsg exec \\$brightness_up",
         "on-scroll-down": "swaymsg exec \\$brightness_down"

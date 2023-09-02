@@ -18,36 +18,37 @@
     "position": "top",
 
     "modules-left": ["custom/menu", "sway/workspaces", "custom/scratchpad"],
-    "modules-center": ["custom/wf-recorder", "sway/mode", "custom/weather"],
+    "modules-center": ["clock", "custom/weather"],
     "modules-right": [
         // informational
-        "sway/language",
+        // "sway/language",
+        "sway/mode",
+        "custom/wf-recorder",
         "custom/github",
-        "custom/clipboard",
         "custom/zeit",
-        "cpu",
+        "custom/clipboard",
+
+        // system
+        "custom/pacman",
         "temperature",
+        "cpu",
         "memory",
+        "idle_inhibitor",
         "battery",
+
+        // controls
+        "custom/sunset",
+        "custom/adaptive-light",
+        "backlight",
+        "custom/playerctl",
+        "pulseaudio",
 
         // connecting
         "network",
         "bluetooth",
 
-        // media
-        "custom/playerctl",
-        "idle_inhibitor",
         "custom/dnd",
-        "pulseaudio",
-        "backlight",
-
-        // system
-        "custom/adaptive-light",
-        "custom/sunset",
-        "custom/pacman",
-
         "tray",
-        "clock"
     ],
 
     // -------------------------------------------------------------------------

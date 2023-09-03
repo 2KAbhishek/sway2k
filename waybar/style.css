@@ -55,7 +55,7 @@
 
 /* The whole bar */
 window#waybar {
-    background: #000;
+    background: alpha(#000, 0.75);
     color: @wm_icon_bg;
     font-size: 14px;
     border: 1px solid #1688f0;
@@ -99,12 +99,11 @@ window#waybar {
     padding-bottom: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    background: @background_color;
 }
 
 #workspaces button.focused {
     color: #000;
-    background: #1688f0;
+    background: alpha(#1688f0, 0.75);
 }
 
 #workspaces button.urgent {
@@ -167,10 +166,6 @@ window#waybar {
     color: @error_color;
     animation-name: blink-critical;
     animation-duration: 2s;
-}
-
-#mode {
-    background: @background_color;
 }
 
 #network.disconnected {

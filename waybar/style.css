@@ -58,7 +58,6 @@ window#waybar {
     background: alpha(#000, 0.75);
     color: @wm_icon_bg;
     font-size: 14px;
-    border: 1px solid #1688f0;
 }
 
 /* Each module */

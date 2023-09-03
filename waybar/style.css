@@ -94,11 +94,8 @@ window#waybar {
  * Module styles
  * -------------------------------------------------------------------------- */
 #workspaces button {
-    border-top: 1px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 #workspaces button.focused {

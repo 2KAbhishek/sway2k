@@ -55,9 +55,9 @@
 
 /* The whole bar */
 window#waybar {
-    background: alpha(#000, 0.6);
+    background: alpha(#000, 0.75);
     color: @wm_icon_bg;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Each module */

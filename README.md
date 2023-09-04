@@ -39,6 +39,34 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 - Minimalistic UI
 - Optimized for AMOLED displays
 
+### Waybar Modules
+
+Comes with a bunch of customized waybar modules:
+
+- `menu`: app launcher
+- `clock`: with calendar integration
+- `weather`: powered by wttr.in
+- `mode`: sway modes
+- `wf-recorder`: screen recorder integration
+- `pacman`: package manager integration
+- `github`: github notifications with gh cli
+- `zeit`: task tracker integration
+- `clipboard`: powered by cliphist
+- `temperature`: cpu temperatures with sensors
+- `cpu`: cpu usage in percentage
+- `memory`: shows used ram
+- `idle-inhibitor`: controls idle screen turning off
+- `battery`: shows battery usages and warnings
+- `sunset`: location based gamma correction
+- `adaptive-light`: brightness adjustment powered by wluma
+- `backlight`: brightness control
+- `playerctl`: controls media playback
+- `pulseaudio`: cotrols audio devices
+- `network`: network connections powered by nmtui
+- `bluetooth`: bluetooth adapter controls
+- `dnd`: mako dnd integrations
+- `tray`: system tray integration
+
 ## Setup
 
 ### ⚡ Requirements

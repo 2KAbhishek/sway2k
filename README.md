@@ -64,6 +64,12 @@ sudo pacman -S sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wl
 sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python
 ```
 
+#### Themes
+
+sway2k uses [BWnB](https://github.com/2KAbhishek/BWnB) as gtk and Kvantum themes, for Firefox it uses [Nightblue](https://github.com/2KAbhishek/nightblue)
+
+Edit [theme.conf](./config.d/theme.conf) to customize accordingly.
+
 ### 🚀 Installation
 
 ```bash

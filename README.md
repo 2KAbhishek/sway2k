@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/sway2k/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/sway2k?style=flat&color=e06c75&label="> </a>
 
-<h3>Short Sweet Headline 🎇🎉</h3>
+<h3>Swaying Windows in Wayland 🎏🛣</h3>
 
 <figure>
   <img src="images/screenshot.png" alt="sway2k in action">
@@ -30,13 +30,14 @@
 
 </div>
 
-sway2k is a `<utility/tool>` that allows `<target_audience>` to `<action>`.
+My personalized configs for [sway window manager](https://swaywm.org/), minimalistic in design and optimized for CLI productivity.
 
 ## ✨ Features
 
-- Supports foo
-- Can do bar
-- Works with bazz
+- Optimized for the CLI
+- Comes with integrations for `foot`, `mako`, `waybar` and more!
+- Minimalistic UI
+- Optimized for AMOLED displays
 
 ## Setup
 

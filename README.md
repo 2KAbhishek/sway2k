@@ -71,8 +71,26 @@ Comes with a bunch of customized waybar modules:
 
 ### ⚡ Requirements
 
-- foo >= bar
-- bazz
+- `sway`: the window manager
+- `foot`: waylan terminal emulator
+- `rofi`: with [rofi2k](https://github.com/2kabhishek/rofi2k) my preferred launcher
+- `waybar`: adds toolbar support
+- `mako`: notification daemon
+- `grimshot`: screenshot support
+- `wf-recorder`: screen recorder support
+- `cliphist`: for clipboard management
+- `wluma`: adaptive brightness support
+- `wlsunset`: sunset timing support
+- `light`: for display brightness
+- `python`: for scripts support
+
+```bash
+# Arch
+sudo pacman -S sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python
+
+# Debian
+sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python
+```
 
 ### 🚀 Installation
 

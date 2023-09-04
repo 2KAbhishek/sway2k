@@ -96,49 +96,33 @@ sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma 
 
 ```bash
 git clone https://github.com/2kabhishek/sway2k
-cd sway2k
-<install_command>
+ln -sfnv "$PWD/sway2k" ~/.config/sway
 ```
 
 ### 💻 Usage
 
-```bash
-USAGE:
-    sway2k [FLAGS] [OPTIONS]
-Example:
-    sway2k
-```
-
-## What's Next
-
-Planning to add `<feature/module>`.
-
-### ✅ To-Do
-
-- [x] Setup repo
-- [ ] Think real hard
-- [ ] Start typing
+You can find keybindings in the [modes dir](config.d/modes/)
 
 ##  Behind The Code
 
 ### 🌈 Inspiration
 
-sway2k was inspired by `<reason/idea>`.
+A spiritual successor to [awesome2k](https://github.com/2KAbhishek/awesome2k).
+
+I have been using awesome wm for a while and wanted to try out wayland so I jumped in to sway!
 
 ### 💡 Challenges/Learnings
 
-- The main challenges were `<issue/difficulty>`
-- I learned about `<learning/accomplishment>`
+- Learned about wayland and sway APIs
 
 ### 🧰 Tooling
 
 - [Dotfiles](https://github.com/2kabhishek/Dotfiles) — Dev Environment
 - [nvim2k](https://github.com/2kabhishek/nvim2k) — Personalized Editor
-- [awesome2k](https://github.com/2kabhishek/awesome2k) — Tiling Window Manager
 
 ### 🔍 More Info
 
-- [similar](https://github.com/2kabhishek/similar) — a related repo
+- [awesome2k](https://github.com/2kabhishek/awesome2k) — Xorg based tiling wm configs
 
 <hr>
 

@@ -84,7 +84,7 @@ WWO_CODE = {
 }
 
 data = {}
-city = "Rampurhat"
+city = os.getenv("WEATHER_CITY") or "Rampurhat"
 temperature = "C"
 distance = "km"
 use_imperial=False

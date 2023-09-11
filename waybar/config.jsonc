@@ -76,7 +76,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "{: %a, %I:%M %p}",
+        "format": "{: %a, %b %d, %I:%M %p}",
         "tooltip": true,
         "tooltip-format": "<tt>{calendar}</tt>",
         "on-click": "swaymsg exec \\$calendar"

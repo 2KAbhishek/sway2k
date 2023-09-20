@@ -18,12 +18,13 @@
     "position": "top",
 
     "modules-left": ["custom/menu", "sway/workspaces", "custom/scratchpad"],
-    "modules-center": ["clock", "custom/weather"],
+    "modules-center": ["clock"],
     "modules-right": [
         // informational
         // "sway/language",
         "sway/mode",
         "custom/wf-recorder",
+        "custom/weather",
         "custom/pacman",
         "custom/github",
         "custom/zeit",
@@ -76,7 +77,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "{: %a, %b %d, %I:%M %p}",
+        "format": "{: %a, %b %d - %I:%M %p}",
         "tooltip": true,
         "tooltip-format": "<tt>{calendar}</tt>",
         "on-click": "swaymsg exec \\$calendar"

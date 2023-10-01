@@ -280,7 +280,8 @@
         "interval": 3600,
         "exec-if": "[ $(pamac checkupdates -q | wc -l) -gt 0 ]",
         "exec": "pamac checkupdates -q | wc -l",
-        "on-click": "pamac-manager --updates; pkill -RTMIN+4 waybar",
+        "on-click": "swaymsg exec \\$once \\$term_float pacui",
+        "on-click-middle": "pamac-manager --updates; pkill -RTMIN+4 waybar",
         "signal": 4
     },
     "custom/github": {
@@ -290,7 +291,8 @@
         "format": " {}",
         "exec": "gh api '/notifications' -q '{ text: length }' | cat -",
         "exec-if": "[ -x \"$(command -v gh)\" ] && gh auth status 2>&1 | grep -q -m 1 'Logged in' && test $(gh api '/notifications' -q 'length') -ne 0",
-        "on-click": "xdg-open https://github.com/notifications && sleep 30 && pkill -RTMIN+4 waybar",
+        "on-click": "swaymsg exec \\$once \\$term_float gh dash",
+        "on-click-middle": "xdg-open https://github.com/notifications && sleep 30 && pkill -RTMIN+4 waybar",
         "signal": 4
     },
     "custom/zeit": {

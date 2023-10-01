@@ -23,14 +23,14 @@
         "temperature",
         "cpu",
         "memory",
-        "battery",
         "backlight",
         "pulseaudio",
+        "battery",
+        "network",
         "custom/playerctl",
         "custom/clipboard",
         "custom/zeit",
         "idle_inhibitor",
-        "network",
         "bluetooth",
         "custom/sunset",
         "custom/dnd",
@@ -164,7 +164,7 @@
     },
     "cpu": {
         "interval": 10,
-        "format": "  {}%",
+        "format": "  {usage}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -291,8 +291,8 @@
     },
     "network": {
         "interval": 10,
-        "format-wifi": "",
-        "format-ethernet": "󰈀",
+        "format-wifi": "  {bandwidthDownBytes} 󰁝 {bandwidthUpBytes}",
+        "format-ethernet": "󰈀  {bandwidthDownBytes} 󰁝 {bandwidthUpBytes}",
         "format-disconnected": "󰖪",
         "tooltip-format": "{icon} {ifname}: {ipaddr}",
         "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}",

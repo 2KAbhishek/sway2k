@@ -37,6 +37,18 @@
         "tray"
     ],
     // Modules
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": {
+            "numlock": " {icon}",
+            "capslock": "󰪛 {icon}"
+        },
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
     "custom/menu": {
         "format": "",
         "on-click": "swaymsg exec \\$menu",

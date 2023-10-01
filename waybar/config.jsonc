@@ -72,6 +72,79 @@
             "(.*) - fish": "> [$1]"
         }
     },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-scroll-up": "swaymsg exec \\$brightness_up",
+        "on-scroll-down": "swaymsg exec \\$brightness_down"
+    },
+    "battery": {
+        "interval": 180,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-charging": "󰂄{capacity}%",
+        "format": "{icon}{capacity}%",
+        "format-icons": [
+            "󱃍",
+            "󰁺",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip": true
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "on-click": "swaymsg exec \\$bluetooth",
+        "on-click-right": "rfkill toggle bluetooth",
+        "tooltip-format": "{}"
+    },
+    "clock": {
+        "interval": 60,
+        "format": "{: %a, %b %d -  %I:%M %p}",
+        "tooltip": true,
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "on-click": "swaymsg exec \\$calendar"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "swaymsg exec \\$once \\$term_float btop",
+        "tooltip": true
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/",
+        "on-click": "swaymsg exec \\$once \\$term_float ranger",
+        "on-click-middle": "swaymsg exec \\$once \\$term_float ncdu /"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "deactivated": "󰾪",
+            "activated": ""
+        },
+        "tooltip": true,
+        "tooltip-format-activated": "power-saving disabled",
+        "tooltip-format-deactivated": "power-saving enabled"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -84,10 +157,66 @@
             "unlocked": ""
         }
     },
-    "disk": {
-        "interval": 30,
-        "format": " {percentage_used}%",
-        "path": "/"
+    "memory": {
+        "interval": 180,
+        "format": " {}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "swaymsg exec \\$once \\$term_float htop",
+        "tooltip": true
+    },
+    "network": {
+        "interval": 10,
+        "format-wifi": "  {bandwidthDownBytes}",
+        "format-ethernet": "󰈀  {bandwidthDownBytes}",
+        "format-disconnected": "󰖪",
+        "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "{icon} disconnected",
+        "tooltip-format-disabled": "{icon} disabled",
+        "on-click": "swaymsg exec \\$once \\$term_float nmtui connect"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%{format_source}",
+        "format-muted": "󰖁 {format_source}",
+        "format-source": "",
+        "format-source-muted": " 󰍭",
+        "format-icons": {
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "default": [
+                "",
+                "󰖀",
+                ""
+            ]
+        },
+        "tooltip-format": "{icon}  {volume}% {format_source}",
+        "on-click": "swaymsg exec \\$pulseaudio",
+        "on-click-middle": "swaymsg exec \\$volume_mute",
+        "on-scroll-up": "swaymsg exec \\$volume_up",
+        "on-scroll-down": "swaymsg exec \\$volume_down"
+    },
+    "temperature": {
+        "critical-threshold": 90,
+        "interval": 60,
+        "format": "{icon} {}°C",
+        "tooltip-format": "{temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": true,
+        "on-click": "swaymsg exec \"\\$once \\$term_float watch sensors\""
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 6
     },
     "custom/menu": {
         "format": "",
@@ -105,13 +234,6 @@
         "exec": "/bin/sh $HOME/.config/sway/scripts/scratchpad.sh",
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
-    },
-    "clock": {
-        "interval": 60,
-        "format": "{: %a, %b %d -  %I:%M %p}",
-        "tooltip": true,
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "on-click": "swaymsg exec \\$calendar"
     },
     "custom/weather": {
         "icon-size": 48,
@@ -184,83 +306,34 @@
         "exec-if": "[ -x \"$(command -v zeit)\" ]",
         "signal": 10
     },
-    "custom/clipboard": {
-        "format": "",
+    "custom/playerctl": {
         "interval": "once",
-        "return-type": "json",
-        "on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
-        "on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
-        "on-click-middle": "rm -f ~/.cache/cliphist/db; pkill -RTMIN+9 waybar",
-        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
-        "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
-        "signal": 9
-    },
-    "temperature": {
-        "critical-threshold": 90,
-        "interval": 60,
-        "format": "{icon} {}°C",
-        "tooltip-format": "{temperatureC}°C",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
         "tooltip": true,
-        "on-click": "swaymsg exec \"\\$once \\$term_float watch sensors\""
-    },
-    "cpu": {
-        "interval": 10,
-        "format": " {usage}%",
-        "states": {
-            "warning": 70,
-            "critical": 90
-        },
-        "on-click": "swaymsg exec \\$once \\$term_float htop",
-        "tooltip": true
-    },
-    "memory": {
-        "interval": 180,
-        "format": " {}%",
-        "states": {
-            "warning": 70,
-            "critical": 90
-        },
-        "on-click": "swaymsg exec \\$once \\$term_float htop",
-        "tooltip": true
-    },
-    "idle_inhibitor": {
+        "return-type": "json",
         "format": "{icon}",
         "format-icons": {
-            "deactivated": "󰾪",
-            "activated": ""
+            "Playing": "",
+            "Paused": ""
         },
-        "tooltip": true,
-        "tooltip-format-activated": "power-saving disabled",
-        "tooltip-format-deactivated": "power-saving enabled"
+        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
+        "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
+        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
+        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
+        "signal": 5
     },
-    "battery": {
-        "interval": 180,
-        "states": {
-            "warning": 30,
-            "critical": 15
+    "custom/dnd": {
+        "interval": "once",
+        "return-type": "json",
+        "format": "{}{icon}",
+        "format-icons": {
+            "default": "",
+            "dnd": ""
         },
-        "format-charging": "󰂄{capacity}%",
-        "format": "{icon}{capacity}%",
-        "format-icons": [
-            "󱃍",
-            "󰁺",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
-        ],
-        "tooltip": true
+        "on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
+        "on-click-right": "makoctl restore",
+        "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
+        "signal": 11
     },
     "custom/sunset": {
         "interval": "once",
@@ -290,86 +363,15 @@
         "exec-if": "$HOME/.config/sway/scripts/wluma.sh check",
         "signal": 12
     },
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": [
-            "󰃞",
-            "󰃟",
-            "󰃠"
-        ],
-        "on-scroll-up": "swaymsg exec \\$brightness_up",
-        "on-scroll-down": "swaymsg exec \\$brightness_down"
-    },
-    "custom/playerctl": {
-        "interval": "once",
-        "tooltip": true,
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "Playing": "",
-            "Paused": ""
-        },
-        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
-        "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
-        "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
-        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
-        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
-        "signal": 5
-    },
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{icon} {volume}%{format_source}",
-        "format-muted": "󰖁 {format_source}",
-        "format-source": "",
-        "format-source-muted": " 󰍭",
-        "format-icons": {
-            "headphone": "󰋋",
-            "headset": "󰋎",
-            "default": [
-                "",
-                "󰖀",
-                ""
-            ]
-        },
-        "tooltip-format": "{icon}  {volume}% {format_source}",
-        "on-click": "swaymsg exec \\$pulseaudio",
-        "on-click-middle": "swaymsg exec \\$volume_mute",
-        "on-scroll-up": "swaymsg exec \\$volume_up",
-        "on-scroll-down": "swaymsg exec \\$volume_down"
-    },
-    "network": {
-        "interval": 10,
-        "format-wifi": "  {bandwidthDownBytes}",
-        "format-ethernet": "󰈀  {bandwidthDownBytes}",
-        "format-disconnected": "󰖪",
-        "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
-        "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
-        "tooltip-format-disconnected": "{icon} disconnected",
-        "tooltip-format-disabled": "{icon} disabled",
-        "on-click": "swaymsg exec \\$once \\$term_float nmtui connect"
-    },
-    "bluetooth": {
-        "format": "",
-        "format-disabled": "󰂲",
-        "on-click": "swaymsg exec \\$bluetooth",
-        "on-click-right": "rfkill toggle bluetooth",
-        "tooltip-format": "{}"
-    },
-    "custom/dnd": {
+    "custom/clipboard": {
+        "format": "",
         "interval": "once",
         "return-type": "json",
-        "format": "{}{icon}",
-        "format-icons": {
-            "default": "",
-            "dnd": ""
-        },
-        "on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
-        "on-click-right": "makoctl restore",
-        "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
-        "signal": 11
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 6
+        "on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
+        "on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
+        "on-click-middle": "rm -f ~/.cache/cliphist/db; pkill -RTMIN+9 waybar",
+        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
+        "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
+        "signal": 9
     }
 }

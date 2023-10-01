@@ -8,6 +8,7 @@
         "custom/menu",
         "sway/workspaces",
         "custom/scratchpad",
+        "sway/window",
         "sway/mode"
     ],
     "modules-center": [
@@ -36,6 +37,41 @@
         "tray"
     ],
     // Modules
+    "sway/language": {
+        "format": " {}",
+        "min-length": 5,
+        "tooltip": false,
+        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
+    },
+    "sway/mode": {
+        "format": " {}",
+        "max-length": 50,
+        "tooltip": false
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1  ",
+            "2": "2  ",
+            "3": "3  ",
+            "4": "4  ",
+            "5": "5  "
+        }
+    },
+    "sway/window": {
+        "format": " {}",
+        "max-length": 40,
+        "all-outputs": true,
+        "offscreen-css": true,
+        "offscreen-css-text": "(inactive)",
+        "rewrite": {
+            "(.*) - Mozilla Firefox": " $1",
+            "(.*) - foot": " $1",
+            "(.*) - fish": "> [$1]"
+        }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -69,10 +105,6 @@
         "exec": "/bin/sh $HOME/.config/sway/scripts/scratchpad.sh",
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>",
-        "tooltip": false
     },
     "clock": {
         "interval": 60,
@@ -339,11 +371,5 @@
     "tray": {
         "icon-size": 18,
         "spacing": 6
-    },
-    "sway/language": {
-        "format": " {}",
-        "min-length": 5,
-        "tooltip": false,
-        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
     }
 }

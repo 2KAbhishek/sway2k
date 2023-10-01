@@ -8,7 +8,7 @@ import requests
 import sys
 import urllib.parse
 from datetime import datetime
-import getopt, sys
+import getopt
 
 WEATHER_SYMBOL = {
     "Unknown":             "✨",
@@ -87,7 +87,7 @@ data = {}
 city = os.getenv("WEATHER_CITY") or "Rampurhat"
 temperature = "C"
 distance = "km"
-use_imperial=False
+use_imperial = False
 
 if use_imperial:
     temperature = "F"
@@ -104,18 +104,20 @@ try:
         if currentArgument in ("-t", "--temperature"):
             temperature = currentValue[0].upper()
             if temperature != "C" and temperature != "F":
-                raise Exception("temperature unit is neither (C)elsius, nor (F)ahrenheit", temperature)
+                raise Exception(
+                    "temperature unit is neither (C)elsius, nor (F)ahrenheit", temperature)
 
         elif currentArgument in ("-d", "--distance"):
             distance = currentValue.lower()
             if distance != "km" and distance != "miles":
-                raise Exception("distance unit is neither km, nor miles", distance)
+                raise Exception(
+                    "distance unit is neither km, nor miles", distance)
 
         else:
             city = urllib.parse.quote(currentValue)
 
 except getopt.error as err:
-    print (str(err))
+    print(str(err))
     exit(1)
 
 feelsLike = f"FeelsLike{temperature}"
@@ -133,8 +135,10 @@ weather = requests.get("https://wttr.in/" + city + "?format=j1").json()
 def format_time(time):
     return time.replace("00", "").zfill(2)
 
+
 def format_temp(temp):
     return (f"{hour[feelsLike]}°{temperature}").ljust(3)
+
 
 def format_chances(hour):
     chances = {
@@ -154,7 +158,8 @@ def format_chances(hour):
             conditions.append(chances[event]+" "+hour[event]+"%")
     return ", ".join(conditions)
 
-data['text'] = f"{weather['current_condition'][0][feelsLike]}°{temperature}"
+
+data['text'] = f"{weather['current_condition'][0][temp]}°{temperature}"
 data['alt'] = WWO_CODE[weather['current_condition'][0]['weatherCode']]
 
 data['tooltip'] = f"Weather in <b>{weather['nearest_area'][0]['areaName'][0]['value']}</b>:\n"
@@ -176,6 +181,5 @@ for i, day in enumerate(weather['weather']):
             if int(format_time(hour['time'])) < datetime.now().hour-2:
                 continue
         data['tooltip'] += f"{format_time(hour['time'])} {WEATHER_SYMBOL[WWO_CODE[hour['weatherCode']]]} {format_temp(hour[feelsLike])} {hour['weatherDesc'][0]['value']}, {format_chances(hour)}\n"
-
 
 print(json.dumps(data))

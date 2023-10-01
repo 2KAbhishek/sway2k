@@ -14,14 +14,13 @@
         "clock"
     ],
     "modules-right": [
-        // "sway/language",
-        // "custom/adaptive-light",
         "custom/wf-recorder",
         "custom/pacman",
         "custom/github",
         "custom/weather",
         "temperature",
         "cpu",
+        "disk",
         "memory",
         "backlight",
         "pulseaudio",
@@ -48,6 +47,11 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/"
     },
     "custom/menu": {
         "format": "",
@@ -176,7 +180,7 @@
     },
     "cpu": {
         "interval": 10,
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -186,7 +190,7 @@
     },
     "memory": {
         "interval": 180,
-        "format": "  {}%",
+        "format": " {}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -210,8 +214,8 @@
             "warning": 30,
             "critical": 15
         },
-        "format-charging": "󰂄 {capacity}%",
-        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄{capacity}%",
+        "format": "{icon}{capacity}%",
         "format-icons": [
             "󱃍",
             "󰁺",

@@ -8,8 +8,8 @@
         "custom/menu",
         "sway/workspaces",
         "custom/scratchpad",
-        "sway/window",
-        "sway/mode"
+        "sway/mode",
+        "sway/window"
     ],
     "modules-center": [
         "clock"

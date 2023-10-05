@@ -11,9 +11,7 @@
         "sway/mode",
         "sway/window"
     ],
-    "modules-center": [
-        "clock"
-    ],
+    "modules-center": ["clock"],
     "modules-right": [
         "custom/wf-recorder",
         "custom/pacman",
@@ -74,11 +72,7 @@
     },
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": [
-            "󰃞",
-            "󰃟",
-            "󰃠"
-        ],
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-scroll-up": "swaymsg exec \\$brightness_up",
         "on-scroll-down": "swaymsg exec \\$brightness_down"
     },
@@ -90,18 +84,7 @@
         },
         "format-charging": "󰂄{capacity}%",
         "format": "{icon}{capacity}%",
-        "format-icons": [
-            "󱃍",
-            "󰁺",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
-        ],
+        "format-icons": ["󱃍", "󰁺", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "tooltip": true
     },
     "bluetooth": {
@@ -114,8 +97,30 @@
     "clock": {
         "interval": 60,
         "format": "{: %a, %b %d -  %I:%M %p}",
-        "tooltip": true,
+        "format-alt": "{: %I:%M %p}",
+        "timezones": ["Asia/Kolkata", "America/New_York"],
         "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 2,
+            "weeks-pos": "left",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down"
+        },
         "on-click": "swaymsg exec \\$calendar"
     },
     "cpu": {
@@ -187,11 +192,7 @@
         "format-icons": {
             "headphone": "󰋋",
             "headset": "󰋎",
-            "default": [
-                "",
-                "󰖀",
-                ""
-            ]
+            "default": ["", "󰖀", ""]
         },
         "tooltip-format": "{icon}  {volume}% {format_source}",
         "on-click": "swaymsg exec \\$pulseaudio",
@@ -204,13 +205,7 @@
         "interval": 60,
         "format": "{icon} {}°C",
         "tooltip-format": "{temperatureC}°C",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
+        "format-icons": ["", "", "", "", ""],
         "tooltip": true,
         "on-click": "swaymsg exec \"\\$once \\$term_float watch sensors\""
     },

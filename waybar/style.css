@@ -33,12 +33,12 @@ background: @theme_bg_color; */
     margin: 0;
     padding: 0;
     font-family: 'FiraCode Nerd Font', 'Roboto Mono', sans-serif;
+    font-size: 11px;
 }
 
 window#waybar {
     background: alpha(#000, 0.75);
     color: @wm_icon_bg;
-    font-size: 11px;
 }
 
 /* Modules */

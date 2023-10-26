@@ -27,7 +27,6 @@
         "network",
         "custom/playerctl",
         "custom/clipboard",
-        "custom/zeit",
         "idle_inhibitor",
         "bluetooth",
         "custom/sunset",

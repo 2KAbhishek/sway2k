@@ -190,7 +190,7 @@
         "format-icons": {
             "headphone": "󰋋",
             "headset": "󰋎",
-            "default": ["", "󰖀", ""]
+            "default": ["", "󰖀", "", "", "", ""]
         },
         "tooltip-format": "{icon}  {volume}% {format_source}",
         "on-click": "swaymsg exec \\$pulseaudio",

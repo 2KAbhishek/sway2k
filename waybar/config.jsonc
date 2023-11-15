@@ -17,7 +17,6 @@
         "custom/pacman",
         "custom/github",
         "custom/weather",
-        "temperature",
         "cpu",
         "memory",
         "disk",

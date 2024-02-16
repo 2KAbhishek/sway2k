@@ -45,7 +45,7 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 
 - `sway`: the window manager
 - `foot`: waylan terminal emulator
-- `rofi`: with [rofi2k](https://github.com/2kabhishek/rofi2k) my preferred launcher
+- `rofi`: with [rofi2k](https://github.com/2kabhishek/rofi2k) as launcher
 - `waybar`: adds toolbar support
 - `mako`: notification daemon
 - `grimshot`: screenshot support
@@ -55,6 +55,7 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 - `wlsunset`: sunset timing support
 - `light`: for display brightness
 - `python`: for scripts support
+- `qutebrowser`: with [qute2k](https://github.com/2kabhishek/qute2k) as launcher
 
 ```bash
 # Arch
@@ -79,7 +80,48 @@ ln -sfnv "$PWD/sway2k" ~/.config/sway
 
 ### 💻 Usage
 
+Default apps and defintions can be found in [definitions.conf](config.d/definitions.conf)
+
+- Default launcher: rofi, with [rofi2k](https://github.com/2kabhishek/rofi2k)
+- Default browser: qutebrowser, with [qute2k](https://github.com/2kabhishek/qute2k)
+- Default camera: guvcview
+- Default terminal: foot
+
 You can find keybindings in the [modes dir](config.d/modes/)
+
+Default keybindings are same as [i3 keybindings](https://i3wm.org/docs/userguide.html#_default_keybindings)
+
+<kbd>Mod</kbd> is set to `Super` key.
+
+| Shortcut                                                              | Action                                 |
+| --------------------------------------------------------------------- | -------------------------------------- |
+| <kbd>Mod</kbd> + <kbd>Enter</kbd>                                     | Open Terminal                          |
+| <kbd>Mod</kbd> + <kbd>h/j/k/l</kbd>                                   | Switch focused window                  |
+| <kbd>Mod</kbd> + <kbd>left/right/0-9</kbd>                            | Switch focused workspace               |
+| <kbd>Mod</kbd> + <kbd>up/down</kbd>                                   | Resize focused workspace               |
+| <kbd>Mod</kbd> + <kbd>Tab</kbd>                                       | Most recent workspace                  |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>h/j/k/l/arrows</kbd>         | Move focused window within workspace   |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>0-9</kbd>                    | Move focused window to workspace       |
+| <kbd>Mod</kbd> + <kbd>Alt</kbd> + <kbd>h/j/k/l/arrows</kbd>           | Move focused window between screens    |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>m</kbd>                      | Move focused window to empty workspace |
+| <kbd>Mod</kbd> + <kbd>n</kbd>                                         | Move to empty workspace                |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd>                      | Move focused window away               |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd>                      | Reload config                          |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd>                      | Toggle waybar                          |
+| <kbd>F11</kbd> / <kbd>Mod</kbd> + <kbd>f</kbd>                        | Full screen focused window             |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>                      | Toggle floating                        |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> / <kbd>F12</kbd> | Floating terminal                      |
+| <kbd>Esc</kbd>                                                        | Close floatin terminal, exit modes     |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>w</kbd>                      | Open default browser                   |
+| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>                      | Open default camera app                |
+| <kbd>Mod</kbd> + <kbd>q</kbd>                                         | Close focused window                   |
+| <kbd>Alt</kbd> + <kbd>Tab</kbd>                                       | Most recent / urgent window            |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>+/-</kbd>                    | Zoom in / Zoom out                     |
+| <kbd>Mod</kbd> + <kbd>Space</kbd>                                     | Open app launcher                      |
+| <kbd>Mod</kbd> + <kbd>d</kbd>                                         | Open app launcher in empty workspace   |
+| <kbd>Mod</kbd> + <kbd>a</kbd>                                         | Open app switcher                      |
+| <kbd>Mod</kbd> + <kbd>v</kbd>                                         | Open clipboard history                 |
+| <kbd>Mod</kbd> + <kbd>.</kbd>                                         | Open emoji panel                       |
 
 #### Waybar Modules
 
@@ -91,7 +133,7 @@ Comes with a bunch of customized waybar modules:
 - `mode`: sway modes
 - `wf-recorder`: screen recorder integration
 - `pacman`: package manager integration
-- `github`: github notifications with gh cli
+- `github`: GitHub notifications with gh cli
 - `zeit`: task tracker integration
 - `clipboard`: powered by cliphist
 - `temperature`: cpu temperatures with sensors
@@ -109,13 +151,13 @@ Comes with a bunch of customized waybar modules:
 - `dnd`: mako dnd integrations
 - `tray`: system tray integration
 
-##  Behind The Code
+## Behind The Code
 
 ### 🌈 Inspiration
 
 A spiritual successor to [awesome2k](https://github.com/2KAbhishek/awesome2k).
 
-I have been using awesome wm for a while and wanted to try out wayland so I jumped in to sway!
+I have been using awesome wm for a while and wanted to try out wayland, so I jumped in to sway!
 
 ### 💡 Challenges/Learnings
 
@@ -144,4 +186,3 @@ I have been using awesome wm for a while and wanted to try out wayland so I jump
 | <a href="https://2kabhishek.github.io/projects" target="_blank">Other Projects </a>
 
 </div>
-

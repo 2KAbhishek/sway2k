@@ -56,6 +56,9 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 - `light`: for display brightness
 - `python`: for scripts support
 - `qutebrowser`: with [qute2k](https://github.com/2kabhishek/qute2k) as launcher
+- `nmtui`: network manager cli
+- `bluetuith`: bluetooth manager cli
+- `pulsemixer`: audio manager cli
 
 ```bash
 # Arch

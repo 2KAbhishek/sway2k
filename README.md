@@ -59,6 +59,7 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 - `nmtui`: network manager cli
 - `bluetuith`: bluetooth manager cli
 - `pulsemixer`: audio manager cli
+- `bmenu`: cli menu for utilities
 
 ```bash
 # Arch

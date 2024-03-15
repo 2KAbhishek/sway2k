@@ -35,7 +35,7 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 ## ✨ Features
 
 - Optimized for the CLI
-- Comes with integrations for `foot`, `mako`, `waybar` and more!
+- Comes with integrations for `foot`, `mako`, `waybar` and more
 - Minimalistic UI
 - Optimized for AMOLED displays
 
@@ -80,13 +80,17 @@ Edit [theme.conf](./config.d/theme.conf) to customize accordingly.
 ```bash
 git clone https://github.com/2kabhishek/sway2k
 ln -sfnv "$PWD/sway2k" ~/.config/sway
+# To setup foot separately
+ln -sfnv "$PWD/sway2k/foot" ~/.config/foot
+# To setup waybar separately
+ln -sfnv "$PWD/sway2k/waybar" ~/.config/waybar
 ```
 
 ### 💻 Usage
 
 #### Definitions
 
-Default apps and defintions can be found in [definitions.conf](config.d/definitions.conf)
+Default apps and definitions are in [definitions.conf](config.d/definitions.conf)
 
 - Default launcher: rofi, with [rofi2k](https://github.com/2kabhishek/rofi2k)
 - Default browser: qutebrowser, with [qute2k](https://github.com/2kabhishek/qute2k)
@@ -99,7 +103,7 @@ You can find keybindings in the [modes dir](config.d/modes/)
 
 Default keybindings are same as [i3 keybindings](https://i3wm.org/docs/userguide.html#_default_keybindings)
 
-<kbd>Mod</kbd> is set to `Super` key.
+<kbd>Mod</kbd> is the `Super` key.
 
 | Shortcut                                                              | Action                                 |
 | --------------------------------------------------------------------- | -------------------------------------- |
@@ -191,10 +195,10 @@ Comes with a bunch of customized waybar modules:
 - `idle-inhibitor`: controls idle screen turning off
 - `battery`: shows battery usages and warnings
 - `sunset`: location based gamma correction
-- `adaptive-light`: brightness adjustment powered by wluma
+- `adaptive-light`: brightness control powered by wluma
 - `backlight`: brightness control
 - `playerctl`: controls media playback
-- `pulseaudio`: cotrols audio devices
+- `pulseaudio`: controls audio devices
 - `network`: network connections powered by nmtui
 - `bluetooth`: bluetooth adapter controls
 - `dnd`: mako dnd integrations

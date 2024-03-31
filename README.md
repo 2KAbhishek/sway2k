@@ -67,6 +67,9 @@ sudo pacman -S sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wl
 
 # Debian
 sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python
+
+# Fedora
+sudo dnf install kvantum lxappearance kanshi calcurse
 ```
 
 #### Themes

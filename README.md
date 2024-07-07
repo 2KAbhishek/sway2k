@@ -89,7 +89,7 @@ ln -sfnv "$PWD/sway2k/foot" ~/.config/foot
 ln -sfnv "$PWD/sway2k/waybar" ~/.config/waybar
 ```
 
-### 💻 Usage
+## 💻 Usage
 
 #### Definitions
 
@@ -100,86 +100,11 @@ Default apps and definitions are in [definitions.conf](config.d/definitions.conf
 - Default camera: guvcview
 - Default terminal: foot
 
-#### Keybindings
+### Keybindings
 
-You can find keybindings in the [modes dir](config.d/modes/)
+All the configured keybindings can be found in the [keybinding manual here](./docs/keybindings.md).
 
-Default keybindings are same as [i3 keybindings](https://i3wm.org/docs/userguide.html#_default_keybindings)
-
-<kbd>Mod</kbd> is the `Super` key.
-
-| Shortcut                                                              | Action                                 |
-| --------------------------------------------------------------------- | -------------------------------------- |
-| <kbd>Mod</kbd> + <kbd>Enter</kbd>                                     | Open Terminal                          |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> / <kbd>F12</kbd> | Open Floating terminal                 |
-| <kbd>Esc</kbd>                                                        | Close floatin terminal, exit modes     |
-| <kbd>Mod</kbd> + <kbd>h/j/k/l</kbd>                                   | Switch focused window                  |
-| <kbd>Mod</kbd> + <kbd>left/right/0-9</kbd>                            | Switch focused workspace               |
-| <kbd>Mod</kbd> + <kbd>up/down</kbd>                                   | Resize focused workspace               |
-| <kbd>Mod</kbd> + <kbd>Tab</kbd>                                       | Most recent workspace                  |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>h/j/k/l/arrows</kbd>         | Move focused window within workspace   |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>0-9</kbd>                    | Move focused window to workspace       |
-| <kbd>Mod</kbd> + <kbd>Alt</kbd> + <kbd>h/j/k/l/arrows</kbd>           | Move focused window between screens    |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>m</kbd>                      | Move focused window to empty workspace |
-| <kbd>Mod</kbd> + <kbd>n</kbd>                                         | Move to empty workspace                |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd>                      | Move focused window away               |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd>                      | Reload config                          |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd>                      | Toggle waybar                          |
-| <kbd>F11</kbd> / <kbd>Mod</kbd> + <kbd>f</kbd>                        | Full screen focused window             |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>                      | Toggle floating                        |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>w</kbd>                      | Open default browser                   |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>                      | Open default camera app                |
-| <kbd>Mod</kbd> + <kbd>q</kbd>                                         | Close focused window                   |
-| <kbd>Alt</kbd> + <kbd>Tab</kbd>                                       | Most recent / urgent window            |
-| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>+/-</kbd>                    | Zoom in / Zoom out                     |
-| <kbd>Mod</kbd> + <kbd>Space</kbd>                                     | Open app launcher                      |
-| <kbd>Mod</kbd> + <kbd>d</kbd>                                         | Open app launcher in empty workspace   |
-| <kbd>Mod</kbd> + <kbd>a</kbd>                                         | Open app switcher                      |
-| <kbd>Mod</kbd> + <kbd>v</kbd>                                         | Open clipboard history                 |
-| <kbd>Mod</kbd> + <kbd>.</kbd>                                         | Open emoji panel                       |
-
-##### Resize Mode
-
-| Shortcut                                     | Action                   |
-| -------------------------------------------- | ------------------------ |
-| <kbd>Mod</kbd> + <kbd>r</kbd>                | Open resize mode         |
-| <kbd>h/j/k/l/arrows</kbd>                    | Resize windows by 10px   |
-| <kbd>Shift</kbd> + <kbd>h/j/k/l/arrows</kbd> | Resize windows by 50px   |
-| <kbd>+/Shift + =</kbd> / <kbd>-</kbd>        | Increase / Decrease gaps |
-| <kbd>Esc</kbd> / <kbd>Enter</kbd>            | Exit mode                |
-
-##### Screenshot Mode
-
-| Shortcut                                         | Action                   |
-| ------------------------------------------------ | ------------------------ |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd> | Open screenshot mode     |
-| <kbd>p</kbd>                                     | Select region to capture |
-| <kbd>o</kbd>                                     | Capture full screen      |
-| <kbd>Shift</kbd> + <kbd>p</kbd> / <kbd>o</kbd>   | Capture with upload      |
-| <kbd>Esc</kbd>                                   | Exit mode                |
-
-##### Record Mode
-
-| Shortcut                                         | Action            |
-| ------------------------------------------------ | ----------------- |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd> | Open record mode  |
-| <kbd>r</kbd>                                     | Start recording   |
-| <kbd>Shift</kbd> + <kbd>r</kbd>                  | Record with audio |
-| <kbd>Esc</kbd>                                   | Exit mode         |
-
-##### Shutdown Mode
-
-| Shortcut                                         | Action             |
-| ------------------------------------------------ | ------------------ |
-| <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>q</kbd> | Open shutdown mode |
-| <kbd>l</kbd>                                     | Lock               |
-| <kbd>s</kbd>                                     | Shutdown           |
-| <kbd>r</kbd>                                     | Reboot             |
-| <kbd>u</kbd>                                     | Sleep              |
-| <kbd>e</kbd>                                     | Logout             |
-| <kbd>Esc</kbd>                                   | Exit mode          |
-
-#### Waybar Modules
+### Waybar Modules
 
 Comes with a bunch of customized waybar modules:
 

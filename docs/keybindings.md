@@ -1,4 +1,4 @@
-# sway2k Keybindings
+# [sway2k](https://github.com/2kabhishek/sway2k) [Keybindings](https://github.com/2KAbhishek/sway2k/blob/main/docs/keybindings.md)
 
 You can find keybindings for modes in the [modes dir](config.d/modes/)
 

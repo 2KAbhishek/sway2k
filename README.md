@@ -30,7 +30,7 @@
 
 </div>
 
-My personalized configs for [sway window manager](https://swaywm.org/), minimalistic in design and optimized for CLI productivity.
+My personalized configs for [sway window manager](https://swaywm.org/), minimalistic in design and optimized for developer productivity.
 
 ## ✨ Features
 
@@ -43,10 +43,15 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 
 ### ⚡ Requirements
 
+#### Packages
+
+All the mentioned packages may not be available in your package manager, you might have to install them manually.
+
 - `sway`: the window manager
-- `foot`: waylan terminal emulator
-- `rofi`: with [rofi2k](https://github.com/2kabhishek/rofi2k) as launcher
+- `foot`: wayland terminal emulator
 - `waybar`: adds toolbar support
+- `rofi`: app launcher
+- `qutebrowser`: keyboard driven browser
 - `mako`: notification daemon
 - `grimshot`: screenshot support
 - `wf-recorder`: screen recorder support
@@ -55,11 +60,14 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 - `wlsunset`: sunset timing support
 - `light`: for display brightness
 - `python`: for scripts support
-- `qutebrowser`: with [qute2k](https://github.com/2kabhishek/qute2k) as launcher
 - `nmtui`: network manager cli
 - `bluetuith`: bluetooth manager cli
 - `pulsemixer`: audio manager cli
 - `bmenu`: cli menu for utilities
+- `kvantum`: theme manager
+  - [BWnb](https://github.com/2kabhishek/BWnb) as the Kvantum theme
+  - Note: You have to manually install `BWnB` using Kvantum Manager, or it will always open the manager after restart
+- FiraCode Nerd Font
 
 ```bash
 # Arch
@@ -72,11 +80,14 @@ sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma 
 sudo dnf install kvantum lxappearance kanshi calcurse
 ```
 
-#### Themes
+#### Recommended Configurations
 
-sway2k uses [BWnB](https://github.com/2KAbhishek/BWnB) as gtk and Kvantum themes, for Firefox it uses [Nightblue](https://github.com/2KAbhishek/nightblue)
+Highly recommended to use this alongside the following configurations:
 
-Edit [theme.conf](./config.d/theme.conf) to customize accordingly.
+- [rofi2k](https://github.com/2kabhishek/rofi2k) as rofi config
+- [qute2k](https://github.com/2kabhishek/qute2k) as quetbrowser config
+- [dots2k](https://github.com/2kabhishek/dots2k) CLI Dev Environment
+- [nvim2k](https://github.com/2kabhishek/nvim2k) Personalized Editor
 
 ### 🚀 Installation
 
@@ -91,18 +102,14 @@ ln -sfnv "$PWD/sway2k/waybar" ~/.config/waybar
 
 ## 💻 Usage
 
-#### Definitions
-
-Default apps and definitions are in [definitions.conf](config.d/definitions.conf)
-
-- Default launcher: rofi, with [rofi2k](https://github.com/2kabhishek/rofi2k)
-- Default browser: qutebrowser, with [qute2k](https://github.com/2kabhishek/qute2k)
-- Default camera: guvcview
-- Default terminal: foot
-
 ### Keybindings
 
 All the configured keybindings can be found in the [keybinding manual here](./docs/keybindings.md).
+
+### Customization
+
+- Customize colors, icons, fonts, and more in [theme.conf](./config.d/theme.conf).
+- Customize Default apps and other definitions in [definitions.conf](config.d/definitions.conf)
 
 ### Waybar Modules
 
@@ -143,11 +150,6 @@ I have been using awesome wm for a while and wanted to try out wayland, so I jum
 ### 💡 Challenges/Learnings
 
 - Learned about wayland and sway APIs
-
-### 🧰 Tooling
-
-- [dots2k](https://github.com/2kabhishek/dots2k) — Dev Environment
-- [nvim2k](https://github.com/2kabhishek/nvim2k) — Personalized Editor
 
 ### 🔍 More Info
 

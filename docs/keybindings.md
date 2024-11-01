@@ -35,7 +35,9 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>Shift + P</kbd>                      | Open default camera app                |
 | <kbd>Mod</kbd> + <kbd>q</kbd>                              | Close focused window                   |
 | <kbd>Mod</kbd> + <kbd>v</kbd>                              | Open clipboard history                 |
-| <kbd>Mod</kbd> + <kbd>Shift + W</kbd>                      | Open default browser                   |
+| <kbd>Mod</kbd> + <kbd>]</kbd>                              | Open Qutebrowser                       |
+| <kbd>Mod</kbd> + <kbd>[</kbd>                              | Open Terminal                          |
+| <kbd>Mod</kbd> + <kbd>;</kbd>                              | Open Camera (guvcview)                 |
 
 ## Resize Mode
 

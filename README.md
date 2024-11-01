@@ -94,10 +94,6 @@ Highly recommended to use this alongside the following configurations:
 ```bash
 git clone https://github.com/2kabhishek/sway2k
 ln -sfnv "$PWD/sway2k" ~/.config/sway
-# To setup foot separately
-ln -sfnv "$PWD/sway2k/foot" ~/.config/foot
-# To setup waybar separately
-ln -sfnv "$PWD/sway2k/waybar" ~/.config/waybar
 ```
 
 ## 💻 Usage
@@ -138,6 +134,13 @@ Comes with a bunch of customized waybar modules:
 - `bluetooth`: bluetooth adapter controls
 - `dnd`: mako dnd integrations
 - `tray`: system tray integration
+
+If you want to use the waybar theme by itself, you can do so by running:
+
+```bash
+# To setup waybar separately
+ln -sfnv "$PWD/sway2k/waybar" ~/.config/waybar
+```
 
 ## Behind The Code
 

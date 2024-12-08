@@ -11,7 +11,7 @@
         "sway/mode",
         "sway/window"
     ],
-    "modules-center": ["clock"],
+    "modules-center": [],
     "modules-right": [
         "custom/wf-recorder",
         "custom/pacman",
@@ -30,7 +30,8 @@
         "bluetooth",
         "custom/sunset",
         "custom/dnd",
-        "tray"
+        "tray",
+        "clock"
     ],
     // Modules
     "sway/language": {

@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-# This script requires i3ipc-python package (install it from a system package manager
-# or pip).
-# It makes inactive windows transparent. Use `transparency_val` variable to control
+# This script requires i3ipc-python package (system or pip)
+# It makes inactive windows transparent. Use `transparency_val` to control
 # transparency strength in range of 0…1 or use the command line argument -o.
 
 import argparse
@@ -11,19 +10,21 @@ import signal
 import sys
 from functools import partial
 
+
 def on_window_focus(inactive_opacity, ipc, event):
     global prev_focused
     global prev_workspace
 
     focused_workspace = ipc.get_tree().find_focused()
 
-    if focused_workspace == None:
+    if focused_workspace is None:
         return
 
     focused = event.container
     workspace = focused_workspace.workspace().num
 
-    if focused.id != prev_focused.id:  # https://github.com/swaywm/sway/issues/2859
+    # https://github.com/swaywm/sway/issues/2859
+    if focused.id != prev_focused.id:
         focused.command("opacity 1")
         if workspace == prev_workspace:
             prev_focused.command("opacity " + inactive_opacity)

@@ -9,7 +9,7 @@ import os
 if len(sys.argv) >= 2:
     rootPath = sys.argv[1]
 else:
-    rootPath = os.path.expanduser('~') '/.config/sway/config'
+    rootPath = os.path.expanduser("~") + "/.config/sway/config"
 
 
 def readFile(filePath):
@@ -25,8 +25,8 @@ def readFile(filePath):
 
     finalLines: list[str] = []
     for line in allLines:
-        if re.search(r'^include\s+(.+?)$', line):
-            nextPath = re.findall(r'^include\s+(.+?)$', line)[0]
+        if re.search(r"^include\s+(.+?)$", line):
+            nextPath = re.findall(r"^include\s+(.+?)$", line)[0]
             finalLines = finalLines + readFile(nextPath)
         else:
             finalLines = finalLines + [line]
@@ -38,7 +38,7 @@ lines = readFile(rootPath)
 
 
 def findKeybindingForLine(lineNumber: int, lines: list[str]):
-    return lines[lineNumber+1].split(' ')[1]
+    return lines[lineNumber + 1].split(" ")[1]
 
 
 class DocsConfig:
@@ -48,16 +48,18 @@ class DocsConfig:
 
 
 def getDocsConfig(lines: list[str]):
-    docsLineRegex = r"^## (?P<category>.+?) // (?P<action>.+?)\s+(// (?P<keybinding>.+?))*##"
+    docsLineRegex = (
+        r"^## (?P<category>.+?) // (?P<action>.+?)\s+(// (?P<keybinding>.+?))*##"
+    )
     docsConfig: list[DocsConfig] = []
     for index, line in enumerate(lines):
         match = re.match(docsLineRegex, line)
-        if (match):
+        if match:
             config = DocsConfig()
-            config.category = match.group('category')
-            config.action = match.group('action')
-            config.keybinding = match.group('keybinding')
-            if (config.keybinding == None):
+            config.category = match.group("category")
+            config.action = match.group("action")
+            config.keybinding = match.group("keybinding")
+            if config.keybinding is None:
                 config.keybinding = findKeybindingForLine(index, lines)
             docsConfig = docsConfig + [config]
     return docsConfig
@@ -68,31 +70,31 @@ def getSymbolDict(lines: list[str]):
     dictionary = {}
     for line in lines:
         match = re.match(setRegex, line)
-        if (match):
-            if (match.group('variable')):
-                dictionary[match.group('variable')] = match.group('value')
+        if match:
+            if match.group("variable"):
+                dictionary[match.group("variable")] = match.group("value")
     return dict(dictionary)
 
 
 translations = {
-    'Mod1': "Alt",
-    'Mod2': "",
-    'Mod3': "󰘲",
-    'Mod4': "",
-    'Mod5': "Scroll",
-    'question': "?",
-    'space': "␣",
-    'minus': "-",
-    'plus': '+',
-    'Return': "󰌑",
-    'XF86AudioRaiseVolume': "󰝝",
-    'XF86AudioLowerVolume': "󰝞",
-    'XF86AudioMute': "󰝟",
-    'XF86AudioMicMute': '󰍭',
-    'XF86MonBrightnessUp': "󰃠",
-    'XF86MonBrightnessDown': "󰃞",
-    'XF86PowerOff': "󰐥",
-    'XF86TouchpadToggle': "Toggle Touchpad"
+    "Mod1": "Alt",
+    "Mod2": "",
+    "Mod3": "󰘲",
+    "Mod4": "",
+    "Mod5": "Scroll",
+    "question": "?",
+    "space": "␣",
+    "minus": "-",
+    "plus": "+",
+    "Return": "󰌑",
+    "XF86AudioRaiseVolume": "󰝝",
+    "XF86AudioLowerVolume": "󰝞",
+    "XF86AudioMute": "󰝟",
+    "XF86AudioMicMute": "󰍭",
+    "XF86MonBrightnessUp": "󰃠",
+    "XF86MonBrightnessDown": "󰃞",
+    "XF86PowerOff": "󰐥",
+    "XF86TouchpadToggle": "Toggle Touchpad",
 }
 
 
@@ -104,7 +106,7 @@ def translate(word: Text, dictionary: dict):
 
 
 def replaceBindingFromMap(binding: Text, dictionary: dict):
-    elements = binding.split('+')
+    elements = binding.split("+")
     resultElements = []
     for el in elements:
         translation = translate(translate(el, dictionary), translations)
@@ -132,6 +134,11 @@ docsList = getDocsList(lines)
 
 result = []
 for config in docsList:
-    result = result + [{'category': config.category,
-                        'action': config.action, 'keybinding': config.keybinding}]
+    result = result + [
+        {
+            "category": config.category,
+            "action": config.action,
+            "keybinding": config.keybinding,
+        }
+    ]
 print(json.dumps(result))

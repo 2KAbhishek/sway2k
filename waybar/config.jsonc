@@ -58,7 +58,6 @@
     },
     "sway/window": {
         "format": " {}",
-        "max-length": 40,
         "all-outputs": true,
         "offscreen-css": true,
         "offscreen-css-text": " ",

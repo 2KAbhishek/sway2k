@@ -6,4 +6,4 @@ if [ -f "$USER_CONFIG_PATH" ]; then
     USER_CONFIG=$USER_CONFIG_PATH
 fi
 
-mako -c "${USER_CONFIG:-"/usr/share/sway/templates/mako"}" "$@"
+mako -c "${USER_CONFIG:-"$HOME/.config/sway/tools/templates/mako"}" "$@"

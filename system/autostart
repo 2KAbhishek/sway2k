@@ -22,7 +22,7 @@ set $xdg-dirs '[ -x "$(command -v xdg-user-dirs-update)" ] && exec xdg-user-dirs
 ## apply the keyboard layout from localectl if no keyboard layout has been set via config.d
 set $auto_xdg_keyboard 'grep -q xkb_layout ~/.config/sway/config.d/*.conf || $HOME/.config/sway/tools/scripts/keyboard.sh'
 set $update_rofi_theme 'mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/Manjaro.rasi'
-set $create_rofi_config 'mkdir -p $HOME/.config/rofi/ && cp -n /usr/share/sway/templates/rofi/config.rasi $HOME/.config/rofi/config.rasi'
+set $create_rofi_config 'mkdir -p $HOME/.config/rofi/ && cp -n $HOME/.config/sway/tools/templates/rofi/config.rasi $HOME/.config/rofi/config.rasi'
 set $enable_noisetorch '[ -x "$(command -v noisetorch)" ] && noisetorch -u && noisetorch -i'
 set $swayidle swayidle -w \
     timeout $idle_timeout 'brightnessctl -s && brightnessctl set 10' \

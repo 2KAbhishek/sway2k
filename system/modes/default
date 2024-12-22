@@ -7,7 +7,7 @@ $bindsym $mod+Return exec $term_cwd
 $bindsym $mod+Shift+Return exec $term
 
 ## Action // Kill focused window ##
-$bindsym $mod+Shift+q kill
+$bindsym $mod+q kill
 
 ## Launch // Open launcher ##
 $bindsym $mod+d exec $menu
@@ -26,7 +26,7 @@ floating_modifier $mod normal
 ## Action // Reload Sway Configuration ##
 $bindsym $mod+Shift+c reload
 
-## Action // Toggle Waybar ##    
+## Action // Toggle Waybar ##
 $bindsym $mod+Shift+b exec pkill -x -SIGUSR1 waybar
 
 # --locked flags allow the buttons to be used whilst the screen is locked.

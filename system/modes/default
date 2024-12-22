@@ -4,7 +4,8 @@
 #
 ## Launch // Terminal ##
 $bindsym $mod+Return exec $term_cwd
-$bindsym $mod+Shift+Return exec $term
+$bindsym $mod+Shift+Return exec $term_float
+$bindsym F12 exec $term_float
 
 ## Action // Kill focused window ##
 $bindsym $mod+q kill

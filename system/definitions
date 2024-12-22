@@ -32,7 +32,7 @@ set $script_path $HOME/.config/sway/tools/scripts
 # Terminal emulator
 set $term footclient
 set $term_cwd $term -D "$(swaycwd 2>/dev/null || echo $HOME)"
-set $term_float footclient --app-id floating_shell --window-size-chars 82x25
+set $term_float footclient --app-id floating_shell --window-size-chars 165x55
 
 # Task manager
 set $task_manager $script_path/once.sh $term_float btop

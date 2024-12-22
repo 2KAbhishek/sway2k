@@ -10,8 +10,8 @@ $bindsym $mod+Shift+Return exec $term
 $bindsym $mod+q kill
 
 ## Launch // Open launcher ##
-$bindsym $mod+d exec $menu
-$bindsym $alt_mod+space exec $menu
+$bindsym $mod+space exec $menu
+$bindsym $mod+d exec $dmenu
 
 ## Launch // Open clipboard ##
 $bindsym $mod+Shift+p exec $clipboard
@@ -174,7 +174,7 @@ $bindsym $mod+equal exec $scale_default
 $bindsym $mod+Shift+space floating toggle
 
 ## Navigation // Toggle focus between tiling and floating ##
-$bindsym $mod+space focus mode_toggle
+$bindsym $alt_mod+space focus mode_toggle
 
 ## Navigation // Swap focus to the parent window ##
 $bindsym $mod+a focus parent

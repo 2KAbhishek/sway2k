@@ -71,7 +71,7 @@ All the mentioned packages may not be available in your package manager, you mig
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python
+sudo pacman -S sway foot rofi waybar mako pulsemixer wf-recorder cliphist wluma wlsunset light python
 
 # Debian
 sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python

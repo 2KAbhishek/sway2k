@@ -11,7 +11,7 @@
         "sway/mode",
         "sway/window"
     ],
-    "modules-center": [],
+    "modules-center": ["clock"],
     "modules-right": [
         "custom/wf-recorder",
         "custom/pacman",
@@ -30,8 +30,7 @@
         "bluetooth",
         "custom/sunset",
         "custom/dnd",
-        "tray",
-        "clock"
+        "tray"
     ],
     // Modules
     "sway/language": {
@@ -94,8 +93,8 @@
     },
     "clock": {
         "interval": 60,
-        "format": "{: %a, %b %d -  %I:%M %p}",
-        "format-alt": "{: %I:%M %p}",
+        "format": " {:%I:%M %p}",
+        "format-alt": " {:%a, %b %d -  %I:%M %p}",
         "timezones": ["Asia/Kolkata", "America/New_York"],
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {

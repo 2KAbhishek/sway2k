@@ -53,7 +53,7 @@ All the mentioned packages may not be available in your package manager, you mig
 - `rofi`: app launcher
 - `qutebrowser`: keyboard driven browser
 - `mako`: notification daemon
-- `grimshot`: screenshot support
+- `grim`: screenshot support
 - `wf-recorder`: screen recorder support
 - `cliphist`: for clipboard management
 - `wluma`: adaptive brightness support
@@ -72,10 +72,10 @@ All the mentioned packages may not be available in your package manager, you mig
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako calcurse pulsemixer wf-recorder cliphist wluma wlsunset light python
+sudo pacman -S sway foot rofi waybar mako calcurse grim pulsemixer wf-recorder cliphist wluma wlsunset light python
 
 # Debian
-sudo apt install sway foot rofi waybar mako grimshot calcurse pulsemixer wf-recorder cliphist wluma wlsunset light python
+sudo apt install sway foot rofi waybar mako grim calcurse pulsemixer wf-recorder cliphist wluma wlsunset light python
 
 # Fedora
 sudo dnf install kvantum lxappearance kanshi calcurse

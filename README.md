@@ -60,9 +60,10 @@ All the mentioned packages may not be available in your package manager, you mig
 - `wlsunset`: sunset timing support
 - `light`: for display brightness
 - `python`: for scripts support
-- `nmtui`: network manager cli
-- `bluetuith`: bluetooth manager cli
-- `pulsemixer`: audio manager cli
+- `nmtui`: network manager
+- `bluetuith`: bluetooth manager
+- `pulsemixer`: audio manager
+- `calcurse`: calendar
 - `bmenu`: cli menu for utilities
 - `kvantum`: theme manager
   - [BWnb](https://github.com/2kabhishek/BWnb) as the Kvantum theme
@@ -71,10 +72,10 @@ All the mentioned packages may not be available in your package manager, you mig
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako pulsemixer wf-recorder cliphist wluma wlsunset light python
+sudo pacman -S sway foot rofi waybar mako calcurse pulsemixer wf-recorder cliphist wluma wlsunset light python
 
 # Debian
-sudo apt install sway foot rofi waybar mako grimshot wf-recorder cliphist wluma wlsunset light python
+sudo apt install sway foot rofi waybar mako grimshot calcurse pulsemixer wf-recorder cliphist wluma wlsunset light python
 
 # Fedora
 sudo dnf install kvantum lxappearance kanshi calcurse

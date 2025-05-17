@@ -22,6 +22,7 @@
         "disk",
         "backlight",
         "battery",
+        "custom/ping",
         "network",
         "pulseaudio",
         "custom/playerctl",
@@ -231,8 +232,13 @@
         "format": "{}",
         "tooltip": true,
         "interval": 3600,
-        // Use WAYBAR_WEATHER_SCALE, WAYBAR_WEATHER_LOCATION envs to customize
         "exec": "$HOME/.config/waybar/modules/weather.sh"
+    },
+    "custom/ping": {
+        "format": " {}",
+        "tooltip": true,
+        "interval": 10,
+        "exec": "$HOME/.config/waybar/modules/ping.sh"
     },
     "custom/wf-recorder": {
         "interval": "once",

@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 # wrapper script for waybar with args, see https://github.com/swaywm/sway/issues/5724
 
+sleep 1
+
 USER_CONFIG_PATH="${HOME}/.config/sway/waybar/config.jsonc"
 USER_STYLE_PATH="${HOME}/.config/sway/waybar/style.css"
 

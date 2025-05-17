@@ -64,6 +64,7 @@ All the mentioned packages may not be available in your package manager, you mig
 - `bluetuith`: bluetooth manager
 - `pulsemixer`: audio manager
 - `calcurse`: calendar
+- `fyi`: notify-send alternative for notifications
 - `bmenu`: cli menu for utilities
 - `kvantum`: theme manager
   - [BWnb](https://github.com/2kabhishek/BWnb) as the Kvantum theme
@@ -72,7 +73,7 @@ All the mentioned packages may not be available in your package manager, you mig
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako calcurse grim jq pulsemixer wf-recorder cliphist wluma wlsunset light python
+sudo pacman -S sway foot rofi waybar mako calcurse grim jq pulsemixer wf-recorder cliphist wluma wlsunset light fyi python
 
 # Debian
 sudo apt install sway foot rofi waybar mako grim calcurse jq pulsemixer wf-recorder cliphist wluma wlsunset light python

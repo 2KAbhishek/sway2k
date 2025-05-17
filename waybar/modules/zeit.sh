@@ -20,11 +20,11 @@ case $1'' in
     project=$(echo $input | pcregrep -io1 '.+\[(.+)\]')
 
     if [ "$task" = "" ] || [ "$project" = "" ]; then
-        notify-send "You did not select a task!"
+        fyi "You did not select a task!"
         exit 1
     fi
 
     zeit track -p "$project" -t "$task"
-    notify-send "Tracking $task in $project"
+    fyi "Tracking $task in $project"
     ;;
 esac

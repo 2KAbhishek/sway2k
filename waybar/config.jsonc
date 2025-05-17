@@ -216,30 +216,6 @@
         "on-click": "swaymsg exec \\$menu",
         "tooltip": false
     },
-    "custom/scratchpad": {
-        "interval": "once",
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "one": "",
-            "many": ""
-        },
-        "exec": "$HOME/.config/waybar/modules/scratchpad.sh",
-        "on-click": "swaymsg 'scratchpad show'",
-        "signal": 7
-    },
-    "custom/weather": {
-        "format": "{}",
-        "tooltip": true,
-        "interval": 3600,
-        "exec": "$HOME/.config/waybar/modules/weather.sh"
-    },
-    "custom/ping": {
-        "format": " {}",
-        "tooltip": true,
-        "interval": 10,
-        "exec": "$HOME/.config/waybar/modules/ping.sh"
-    },
     "custom/wf-recorder": {
         "interval": "once",
         "return-type": "json",
@@ -268,19 +244,6 @@
         "on-click": "swaymsg exec \\$once \\$term_float gh dash",
         "on-click-middle": "xdg-open https://github.com/notifications && sleep 30 && pkill -RTMIN+4 waybar",
         "signal": 4
-    },
-    "custom/zeit": {
-        "return-type": "json",
-        "interval": "once",
-        "format": "{icon}",
-        "format-icons": {
-            "tracking": "󰖷",
-            "stopped": ""
-        },
-        "exec": "/bin/sh $HOME/.config/sway/scripts/zeit.sh status",
-        "on-click": "/bin/sh $HOME/.config/sway/scripts/zeit.sh click; pkill -RTMIN+10 waybar",
-        "exec-if": "[ -x \"$(command -v zeit)\" ]",
-        "signal": 10
     },
     "custom/playerctl": {
         "interval": "once",
@@ -311,18 +274,54 @@
         "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
         "signal": 11
     },
+    "custom/clipboard": {
+        "format": "",
+        "interval": "once",
+        "return-type": "json",
+        "on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
+        "on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
+        "on-click-middle": "rm -f ~/.cache/cliphist/db; pkill -RTMIN+9 waybar",
+        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
+        "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
+        "signal": 9
+    },
+    "custom/scratchpad": {
+        "interval": "once",
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": {
+            "one": "",
+            "many": ""
+        },
+        "exec": "$HOME/.config/sway/waybar/modules/scratchpad.sh",
+        "on-click": "swaymsg 'scratchpad show'",
+        "signal": 7
+    },
+    "custom/zeit": {
+        "return-type": "json",
+        "interval": "once",
+        "format": "{icon}",
+        "format-icons": {
+            "tracking": "󰖷",
+            "stopped": ""
+        },
+        "exec": "/bin/sh $HOME/.config/sway/waybar/modules/zeit.sh status",
+        "on-click": "/bin/sh $HOME/.config/sway/waybar/modules/zeit.sh click; pkill -RTMIN+10 waybar",
+        "exec-if": "[ -x \"$(command -v zeit)\" ]",
+        "signal": 10
+    },
     "custom/sunset": {
         "interval": "once",
         "tooltip": true,
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
-            "on": "",
-            "off": ""
+            "on": "",
+            "off": ""
         },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/sway/scripts/sunset.sh",
-        "on-click": "$HOME/.config/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
-        "exec-if": "$HOME/.config/sway/scripts/sunset.sh check",
+        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/sway/waybar/modules/sunset.sh",
+        "on-click": "$HOME/.config/sway/waybar/modules/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "exec-if": "$HOME/.config/sway/waybar/modules/sunset.sh check",
         "signal": 6
     },
     "custom/adaptive-light": {
@@ -334,20 +333,21 @@
             "on": "󰃡",
             "off": "󰃠"
         },
-        "exec": "$HOME/.config/sway/scripts/wluma.sh",
-        "on-click": "$HOME/.config/sway/scripts/wluma.sh toggle; pkill -RTMIN+12 waybar",
-        "exec-if": "$HOME/.config/sway/scripts/wluma.sh check",
+        "exec": "$HOME/.config/sway/waybar/modules/wluma.sh",
+        "on-click": "$HOME/.config/sway/waybar/modules/wluma.sh toggle; pkill -RTMIN+12 waybar",
+        "exec-if": "$HOME/.config/sway/waybar/modules/wluma.sh check",
         "signal": 12
     },
-    "custom/clipboard": {
-        "format": "",
-        "interval": "once",
-        "return-type": "json",
-        "on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
-        "on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
-        "on-click-middle": "rm -f ~/.cache/cliphist/db; pkill -RTMIN+9 waybar",
-        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
-        "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
-        "signal": 9
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "$HOME/.config/sway/waybar/modules/weather.sh"
+    },
+    "custom/ping": {
+        "format": " {}",
+        "tooltip": true,
+        "interval": 10,
+        "exec": "$HOME/.config/sway/waybar/modules/ping.sh"
     }
 }

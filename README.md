@@ -110,11 +110,10 @@ All the configured keybindings can be found in the [keybinding manual here](./do
 
 ### Waybar Modules
 
-Comes with a bunch of customized waybar modules:
+Comes with a bunch of customized [waybar modules](./waybar/config.jsonc)
 
 - `menu`: app launcher
 - `clock`: with calendar integration
-- `weather`: powered by wttr.in
 - `mode`: sway modes
 - `wf-recorder`: screen recorder integration
 - `pacman`: package manager integration
@@ -136,7 +135,14 @@ Comes with a bunch of customized waybar modules:
 - `dnd`: mako dnd integrations
 - `tray`: system tray integration
 
-If you want to use the waybar theme by itself, you can do so by running:
+These modules share their behaviour with [tmux2k plugins](https://github.com/2kabhishek/tmux2k#-available-plugins)
+
+- `weather`: powered by wttr.in
+- `ping`: shows ping status of a server
+- `gpu`: shows GPU usage
+- `uptime`: shows system uptime
+
+If you want to use the waybar config by itself, you can do so by running:
 
 ```bash
 # To setup waybar separately

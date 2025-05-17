@@ -229,7 +229,7 @@
     },
     "custom/weather": {
         "icon-size": 48,
-        "format": "{icon} {}",
+        "format": "{icon} {text}",
         "tooltip": true,
         "interval": 3600,
         // accepts -c/--city <city> -t/--temperature <C/F> -d/--distance <km/miles>

@@ -122,6 +122,7 @@ if [ "$ACTION" = "check" ]; then
     check wl-copy
     check jq
     check fyi
+    check swappy
     exit
 elif [ "$SUBJECT" = "area" ]; then
     GEOM=$(slurp -d)

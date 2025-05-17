@@ -20,6 +20,7 @@
         // "custom/weather",
         "cpu",
         "memory",
+        // "custom/gpu",
         "disk",
         "backlight",
         "battery",
@@ -346,10 +347,16 @@
         "exec": "$HOME/.config/sway/waybar/modules/weather.sh"
     },
     "custom/uptime": {
-        "format": "{}",
+        "format": "{} ",
         "tooltip": true,
         "interval": 180,
         "exec": "$HOME/.config/sway/waybar/modules/uptime.sh"
+    },
+    "custom/gpu": {
+        "format": "{} ",
+        "tooltip": true,
+        "interval": 10,
+        "exec": "$HOME/.config/sway/waybar/modules/gpu.sh"
     },
     "custom/ping": {
         "format": " {}",

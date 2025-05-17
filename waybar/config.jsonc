@@ -224,7 +224,7 @@
             "one": "",
             "many": ""
         },
-        "exec": "/bin/sh $HOME/.config/sway/scripts/scratchpad.sh",
+        "exec": "$HOME/.config/waybar/modules/scratchpad.sh",
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },

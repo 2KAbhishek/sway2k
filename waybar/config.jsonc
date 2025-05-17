@@ -231,8 +231,8 @@
         "format": "{}",
         "tooltip": true,
         "interval": 3600,
-        // Use WEATHER_SCALE, WEATHER_LOCATION to customize
-        "exec": "$HOME/.config/sway/scripts/weather.sh"
+        // Use WAYBAR_WEATHER_SCALE, WAYBAR_WEATHER_LOCATION envs to customize
+        "exec": "$HOME/.config/waybar/modules/weather.sh"
     },
     "custom/wf-recorder": {
         "interval": "once",

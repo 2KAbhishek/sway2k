@@ -2,9 +2,9 @@
 
 export LC_ALL=en_US.UTF-8
 
-weather_scale=${WEATHER_SCALE:-c}
-fixed_location=${WEATHER_LOCATION:-""}
-display_location=${SHOW_WEATHER_LOCATION:-false}
+weather_scale=${WAYBAR_WEATHER_SCALE:-c}
+fixed_location=${WAYBAR_WEATHER_LOCATION:-""}
+display_location=${WAYBAR_SHOW_WEATHER_LOCATION:-false}
 
 declare -A weather_icons=(
     ["Clear"]=""

@@ -228,34 +228,11 @@
         "signal": 7
     },
     "custom/weather": {
-        "icon-size": 48,
-        "format": "{icon} {text}",
+        "format": "{}",
         "tooltip": true,
         "interval": 3600,
-        // accepts -c/--city <city> -t/--temperature <C/F> -d/--distance <km/miles>
-        "exec": "$HOME/.config/sway/scripts/weather.py",
-        "return-type": "json",
-        "format-icons": {
-            "Unknown": "",
-            "Cloudy": "󰖐",
-            "Fog": "",
-            "HeavyRain": "",
-            "HeavyShowers": "",
-            "HeavySnow": "",
-            "HeavySnowShowers": "󰜗",
-            "LightRain": "",
-            "LightShowers": "",
-            "LightSleet": "",
-            "LightSleetShowers": "",
-            "LightSnow": "",
-            "LightSnowShowers": "󰙿",
-            "PartlyCloudy": "",
-            "Sunny": "",
-            "ThunderyHeavyRain": "󰙾",
-            "ThunderyShowers": "",
-            "ThunderySnowShowers": "",
-            "VeryCloudy": ""
-        }
+        // Use WEATHER_SCALE, WEATHER_LOCATION to customize
+        "exec": "$HOME/.config/sway/scripts/weather.sh"
     },
     "custom/wf-recorder": {
         "interval": "once",

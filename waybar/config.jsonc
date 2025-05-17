@@ -16,13 +16,14 @@
         "custom/wf-recorder",
         "custom/pacman",
         "custom/github",
-        "custom/weather",
+        // "custom/uptime",
+        // "custom/weather",
         "cpu",
         "memory",
         "disk",
         "backlight",
         "battery",
-        "custom/ping",
+        // "custom/ping",
         "network",
         "pulseaudio",
         "custom/playerctl",
@@ -343,6 +344,12 @@
         "tooltip": true,
         "interval": 3600,
         "exec": "$HOME/.config/sway/waybar/modules/weather.sh"
+    },
+    "custom/uptime": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 180,
+        "exec": "$HOME/.config/sway/waybar/modules/uptime.sh"
     },
     "custom/ping": {
         "format": " {}",

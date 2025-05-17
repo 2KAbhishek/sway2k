@@ -269,11 +269,10 @@
     },
     "custom/pacman": {
         "format": "󰮯 {}",
-        "interval": 3600,
-        "exec-if": "[ $(pamac checkupdates -q | wc -l) -gt 0 ]",
-        "exec": "pamac checkupdates -q | wc -l",
-        "on-click": "swaymsg exec \\$once \\$term_float pacui",
-        "on-click-middle": "pamac-manager --updates; pkill -RTMIN+4 waybar",
+        "interval": 5,
+        "exec-if": "[ $(pacman -Qu | wc -l) -gt 0 ]",
+        "exec": "pacman -Qu | wc -l",
+        "on-click": "swaymsg exec \\$once \\$term_float 'sudo pacman -Syu'",
         "signal": 4
     },
     "custom/github": {

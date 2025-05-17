@@ -7,16 +7,13 @@
 ##  - `swaymsg`: to read properties of current window
 ##  - `wl-copy`: clipboard utility
 ##  - `jq`: json utility to parse swaymsg output
-##  - `fyi`: to show notifications
+##  - `notify-send.sh`: to show notifications
 ## Those are needed to be installed, if unsure, run `grimshot check`
 ##
 ## See `man 1 grimshot` or `grimshot usage` for further details.
 
 getTargetDirectory() {
-    test -f "${XDG_CONFIG_HOME:-$HOME/.config}/user-dirs.dirs" &&
-        . "${XDG_CONFIG_HOME:-$HOME/.config}/user-dirs.dirs"
-
-    echo "${XDG_SCREENSHOTS_DIR:-${XDG_PICTURES_DIR:-$HOME/Pictures/Screenshots/}}"
+    echo "$HOME/Pictures/Screenshots/"
 }
 
 NOTIFY=no
@@ -66,8 +63,9 @@ if [ "$ACTION" != "save" ] && [ "$ACTION" != "copy" ] && [ "$ACTION" != "check" 
 fi
 
 notify() {
-    fyi -t 3000 -a grimshot "$@"
+    notify-send.sh -t 3000 -a grimshot "$@"
 }
+
 notifyOk() {
     [ "$NOTIFY" = "no" ] && return
 
@@ -75,6 +73,7 @@ notifyOk() {
     MESSAGE=${1:-"OK"}
     notify "$TITLE" "$MESSAGE"
 }
+
 notifyError() {
     if [ $NOTIFY = "yes" ]; then
         TITLE=${2:-"Screenshot"}
@@ -121,7 +120,7 @@ if [ "$ACTION" = "check" ]; then
     check swaymsg
     check wl-copy
     check jq
-    check fyi
+    check notify-send.sh
     check swappy
     exit
 elif [ "$SUBJECT" = "area" ]; then

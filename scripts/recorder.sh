@@ -16,11 +16,11 @@ countdown() {
 notify() {
     line=$1
     shift
-    fyi "Recording" "${line}" -i /usr/share/icons/Papirus-Dark/32x32/devices/camera-video.svg $*
+    notify-send.sh "Recording" "${line}" -i /usr/share/icons/Papirus-Dark/32x32/devices/camera-video.svg $*
 }
 
 if [ $status != 0 ]; then
-    target_path=$(xdg-user-dir VIDEOS)
+    target_path="$(xdg-user-dir VIDEOS)/Recordings"
     timestamp=$(date +'recording_%Y%m%d-%H%M%S')
 
     notify "Select a region to record" -t 1000

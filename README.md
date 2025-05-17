@@ -65,19 +65,22 @@ All the mentioned packages may not be available in your package manager, you mig
 - `pulsemixer`: audio manager
 - `calcurse`: calendar
 - `swappy`: for screenshot editing
-- `fyi`: notify-send alternative for notifications
+- `notify-send.sh`: notify-send alternative for notifications
 - `bmenu`: cli menu for utilities
 - `kvantum`: theme manager
   - [BWnb](https://github.com/2kabhishek/BWnb) as the Kvantum theme
   - Note: You have to manually install `BWnB` using Kvantum Manager, or it will always open the manager after restart
+- `themix`: for theming gtk apps
 - FiraCode Nerd Font
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako calcurse grim jq pulsemixer wf-recorder cliphist wluma wlsunset light fyi swappy python
+sudo pacman -S sway foot rofi waybar mako calcurse grim jq pulsemixer wf-recorder cliphist wluma wlsunset light swappy python \
+xdg-user-dirs kvantum lxappearance ttf-firacode-nerd
+yay notify-send.sh themix-full-git # themix can be removed after BWnB export
 
 # Debian
-sudo apt install sway foot rofi waybar mako grim calcurse jq pulsemixer wf-recorder cliphist wluma wlsunset light fyi swappy python
+sudo apt install sway foot rofi waybar mako grim calcurse jq pulsemixer wf-recorder cliphist wluma wlsunset light notify-send.sh swappy python
 
 # Fedora
 sudo dnf install kvantum lxappearance kanshi calcurse
@@ -91,6 +94,7 @@ Highly recommended to use this alongside the following configurations:
 - [qute2k](https://github.com/2kabhishek/qute2k) as quetbrowser config
 - [dots2k](https://github.com/2kabhishek/dots2k) CLI Dev Environment
 - [nvim2k](https://github.com/2kabhishek/nvim2k) Personalized Editor
+- [BWnb](https://github.com/2kabhishek/BWnb) Theme used for Kvantum and GTK
 
 ### 🚀 Installation
 

@@ -23,7 +23,7 @@
 <h3>Swaying Windows in Wayland 🎏🛣</h3>
 
 <figure>
-  <img src="images/screenshot.png" alt="sway2k in action">
+  <img src="docs/images/screenshot.jpg" alt="sway2k in action">
   <br/>
   <figcaption>sway2k in action</figcaption>
 </figure>

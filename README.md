@@ -66,16 +66,16 @@ All the mentioned packages may not be available in your package manager, you mig
 - `calcurse`: calendar
 - `swappy`: for screenshot editing
 - `notify-send.sh`: notify-send alternative for notifications
-- `bmenu`: cli menu for utilities
 - `kvantum`/`lxappearance`/`themix`: qt / gtk theme manager - themix can be removed after BWnB gtk theme export
   - [BWnb](https://github.com/2kabhishek/BWnb) as the theme for qt and gtk
   - Note: You have to manually install `BWnB` using Kvantum Manager, or it will always open the manager after restart
+- `btop`: system monitor
 - FiraCode Nerd Font
 
 ```bash
 # Arch
 sudo pacman -S sway foot rofi waybar mako calcurse grim jq pulsemixer wf-recorder cliphist wluma wlsunset light swappy python \
-xdg-user-dirs kvantum lxappearance ttf-firacode-nerd qutebrowser
+xdg-user-dirs kvantum lxappearance ttf-firacode-nerd qutebrowser btop
 yay notify-send.sh themix-full-git
 
 # Debian

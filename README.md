@@ -54,6 +54,8 @@ All the mentioned packages may not be available in your package manager, you mig
 - `qutebrowser`: keyboard driven browser
 - `mako`: notification daemon
 - `grim`: screenshot support
+- `swappy`: for screenshot editing
+- `slurp`: for screenshot area selection
 - `wf-recorder`: screen recorder support
 - `cliphist`: for clipboard management
 - `wluma`: adaptive brightness support
@@ -64,7 +66,6 @@ All the mentioned packages may not be available in your package manager, you mig
 - `bluetuith`: bluetooth manager
 - `pulsemixer`: audio manager
 - `calcurse`: calendar
-- `swappy`: for screenshot editing
 - `notify-send.sh`: notify-send alternative for notifications
 - `kvantum`/`lxappearance`/`themix`: qt / gtk theme manager - themix can be removed after BWnB gtk theme export
   - [BWnb](https://github.com/2kabhishek/BWnb) as the theme for qt and gtk

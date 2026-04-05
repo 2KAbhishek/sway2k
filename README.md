@@ -60,7 +60,7 @@ All the mentioned packages may not be available in your package manager, you mig
 - `cliphist`: for clipboard management
 - `wluma`: adaptive brightness support
 - `wlsunset`: sunset timing support
-- `light`: for display brightness
+- `brightnessctl`: for display brightness
 - `python`: for scripts support
 - `nmtui`: network manager
 - `bluetuith`: bluetooth manager

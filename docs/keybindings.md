@@ -24,9 +24,11 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>h/j/k/l</kbd>              | Switch focused window                  |
 | <kbd>Mod</kbd> + <kbd>H/J/K/L/arrows</kbd>       | Move focused window within workspace   |
 | <kbd>Mod</kbd> + <kbd>a</kbd>                    | Window switcher                        |
-| <kbd>Mod</kbd> + <kbd>B</kbd>                    | Toggle waybar                          |
+| <kbd>Mod</kbd> + <kbd>b</kbd>                    | Toggle waybar                          |
 | <kbd>Mod</kbd> + <kbd>C</kbd>                    | Reload config                          |
 | <kbd>Mod</kbd> + <kbd>d</kbd>                    | Open app launcher in empty workspace   |
+| <kbd>Mod</kbd> + <kbd>e</kbd>                    | Layout: Horizontal                     |
+| <kbd>Mod</kbd> + <kbd>E</kbd>                    | Layout: Vertical                       |
 | <kbd>Mod</kbd> + <kbd>f / F11</kbd>              | Full screen focused window             |
 | <kbd>Mod</kbd> + <kbd>F</kbd>                    | Toggle floating                        |
 | <kbd>Mod</kbd> + <kbd>m</kbd>                    | Move focused window to workspace       |
@@ -38,8 +40,10 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>Q</kbd>                    | Mode: Shutdown                         |
 | <kbd>Mod</kbd> + <kbd>r</kbd>                    | Mode: Resize                           |
 | <kbd>Mod</kbd> + <kbd>R</kbd>                    | Mode: Record                           |
-| <kbd>Mod</kbd> + <kbd>s</kbd>                    | Layout: Stacked                        |
+| <kbd>Mod</kbd> + <kbd>s</kbd>                    | Layout: Switch                         |
 | <kbd>Mod</kbd> + <kbd>S</kbd>                    | Mode: Screenshot                       |
+| <kbd>Mod</kbd> + <kbd>t</kbd>                    | Layout: Tabbed                         |
+| <kbd>Mod</kbd> + <kbd>T</kbd>                    | Layout: Stacked                        |
 | <kbd>Mod</kbd> + <kbd>v</kbd>                    | Open clipboard history                 |
 | <kbd>Mod</kbd> + <kbd>]</kbd>                    | Open Qutebrowser                       |
 | <kbd>Mod</kbd> + <kbd>[</kbd>                    | Open Terminal                          |

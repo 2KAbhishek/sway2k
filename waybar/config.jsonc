@@ -41,24 +41,28 @@
         "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
     },
     "sway/mode": {
-        "format": " {}",
+        "format": " {}",
         "max-length": 50,
         "tooltip": false
     },
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{icon}",
+        "format": "{name}{icon}",
         "format-icons": {
-            "1": "1  :",
-            "2": "2  :",
-            "3": "3  :",
-            "4": "4  :",
-            "5": "5  :"
+            "1": "   ",
+            "2": "   ",
+            "3": "   ",
+            "4": "   ",
+            "5": "   ",
+            "6": "   ",
+            "7": "   ",
+            "8": "   ",
+            "9": "   "
         }
     },
     "sway/window": {
-        "format": " {}",
+        "format": "  {}",
         "all-outputs": true,
         "offscreen-css": true,
         "offscreen-css-text": " ",

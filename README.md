@@ -68,7 +68,8 @@ Highly recommended to use this alongside the following configurations:
 
 ```bash
 git clone https://github.com/2kabhishek/sway2k
-ln -sfnv "$PWD/sway2k" ~/.config/sway
+cd sway2k
+./install.sh
 ```
 
 ## 💻 Usage

@@ -58,7 +58,6 @@ All the mentioned packages may not be available in your package manager, you mig
 - `slurp`: for screenshot area selection
 - `wf-recorder`: screen recorder support
 - `cliphist`: for clipboard management
-- `wluma`: adaptive brightness support
 - `wlsunset`: sunset timing support
 - `brightnessctl`: for display brightness
 - `python`: for scripts support
@@ -131,7 +130,6 @@ Comes with a bunch of customized [waybar modules](./waybar/config.jsonc)
 - `idle-inhibitor`: controls idle screen turning off
 - `battery`: shows battery usages and warnings
 - `sunset`: location based gamma correction
-- `adaptive-light`: brightness control powered by wluma
 - `backlight`: brightness control
 - `playerctl`: controls media playback
 - `pulseaudio`: controls audio devices

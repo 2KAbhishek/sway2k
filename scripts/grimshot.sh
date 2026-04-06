@@ -7,7 +7,7 @@
 ##  - `swaymsg`: to read properties of current window
 ##  - `wl-copy`: clipboard utility
 ##  - `jq`: json utility to parse swaymsg output
-##  - `notify-send.sh`: to show notifications
+##  - `notify`: to show notifications
 ## Those are needed to be installed, if unsure, run `grimshot check`
 ##
 ## See `man 1 grimshot` or `grimshot usage` for further details.
@@ -62,8 +62,8 @@ if [ "$ACTION" != "save" ] && [ "$ACTION" != "copy" ] && [ "$ACTION" != "check" 
     exit
 fi
 
-notify() {
-    notify-send.sh -t 3000 -a grimshot "$@"
+notify_grim() {
+    notify -t 3000 -a grimshot "$@"
 }
 
 notifyOk() {
@@ -71,14 +71,14 @@ notifyOk() {
 
     TITLE=${2:-"Screenshot"}
     MESSAGE=${1:-"OK"}
-    notify "$TITLE" "$MESSAGE"
+    notify_grim "$TITLE" "$MESSAGE"
 }
 
 notifyError() {
     if [ $NOTIFY = "yes" ]; then
         TITLE=${2:-"Screenshot"}
         MESSAGE=${1:-"Error taking screenshot with grim"}
-        notify -u critical "$TITLE" "$MESSAGE"
+        notify_grim -u critical "$TITLE" "$MESSAGE"
     else
         echo "$1"
     fi
@@ -120,7 +120,7 @@ if [ "$ACTION" = "check" ]; then
     check swaymsg
     check wl-copy
     check jq
-    check notify-send.sh
+    check notify
     check swappy
     exit
 elif [ "$SUBJECT" = "area" ]; then

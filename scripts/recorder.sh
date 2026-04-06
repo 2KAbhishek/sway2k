@@ -16,7 +16,7 @@ countdown() {
 notify() {
     line=$1
     shift
-    notify-send.sh "Recording" "${line}" -i /usr/share/icons/Papirus-Dark/32x32/devices/camera-video.svg $*
+    notify "Recording" "${line}" -i /usr/share/icons/Papirus-Dark/32x32/devices/camera-video.svg $*
 }
 
 if [ $status != 0 ]; then

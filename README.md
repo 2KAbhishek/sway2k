@@ -30,14 +30,12 @@
 
 </div>
 
-My personalized configs for [sway window manager](https://swaywm.org/), minimalistic in design and optimized for developer productivity.
+My personalized configs for [sway window manager](https://swaywm.org/), minimalistic in design and optimized for developer productivity and speed.
 
 ## ✨ Features
 
-- Optimized for the CLI
-- Comes with integrations for `foot`, `mako`, `waybar` and more
-- Minimalistic UI
-- Optimized for AMOLED displays
+- Optimized for keyboard driven CLI workflow
+- Minimalistic UI, optimized for AMOLED displays
 
 ## Setup
 
@@ -47,35 +45,12 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 
 All the mentioned packages may not be available in your package manager, you might have to install them manually.
 
-- `sway`: the window manager
-- `foot`: wayland terminal emulator
-- `waybar`: adds toolbar support
-- `rofi`: app launcher
-- `qutebrowser`: keyboard driven browser
-- `mako`: notification daemon
-- `grim`: screenshot support
-- `swappy`: for screenshot editing
-- `slurp`: for screenshot area selection
-- `wf-recorder`: screen recorder support
-- `cliphist`: for clipboard management
-- `wlsunset`: sunset timing support
-- `brightnessctl`: for display brightness
-- `python`: for scripts support
-- `nmtui`: network manager
-- `bluetuith`: bluetooth manager
-- `pulsemixer`: audio manager
-- `calcurse`: calendar
-- `notify-send.sh`: notify-send alternative for notifications
-- `kvantum`/`lxappearance`/`themix`: qt / gtk theme manager
-- `btop`: system monitor
-- FiraCode, Nerd Font
-
 ```bash
 # Arch
 sudo pacman -S sway foot rofi waybar mako calcurse grim slurp \
 jq pulsemixer wf-recorder cliphist wlsunset swappy python btop \
-qutebrowser xdg-user-dirs kvantum lxappearance rofi-emoji \
-ttf-firacode-nerd noto-fonts-emoji ttf-roboto
+qutebrowser xdg-user-dirs kvantum lxappearance rofi-emoji bluetui \
+networkmanager ttf-firacode-nerd noto-fonts-emoji ttf-roboto
 
 yay notify-send.sh themix-full-git
 ```

@@ -83,7 +83,7 @@ Edit [theme.conf](./config.d/theme.conf) to customize themes. This will override
 
 #### Themix
 
-After installing themix, find BWnB in the Contributed section, click on "Export Theme" and set the export path to `~/.themes/BWnB`
+After installing themix, find BWnB in the Contributed section, click on "Export Theme" and set the export path to `~/.local/share/themes/BWnB`
 
 > themix can be removed after BWnB gtk theme export
 
@@ -95,7 +95,7 @@ Clone [BWnb](https://github.com/2kabhishek/BWnb) to a directory. Launch Kvantum 
 
 #### Icons
 
-Download [Reversal-blue Icons](https://www.pling.com/p/1340791) and extract it to `~/.icons` or install the downloaded `Reversal-blue.tar.xz` file via lxappearance.
+Download [Reversal-blue Icons](https://www.pling.com/p/1340791) and extract it to `~/.local/share/icons` or install the downloaded `Reversal-blue.tar.xz` file via lxappearance.
 
 ### Waybar Modules
 

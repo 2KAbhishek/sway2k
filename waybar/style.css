@@ -63,7 +63,9 @@ window#waybar {
 #backlight,
 #language,
 #custom-sunset,
+#custom-playerctl-prev,
 #custom-playerctl,
+#custom-playerctl-next,
 #tray {
     padding-left: 5px;
     padding-right: 5px;

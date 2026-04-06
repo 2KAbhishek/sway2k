@@ -107,7 +107,6 @@ Comes with a bunch of customized [waybar modules](./waybar/config.jsonc)
 - `wf-recorder`: screen recorder integration
 - `pacman`: package manager integration
 - `github`: GitHub notifications with gh cli
-- `zeit`: task tracker integration
 - `clipboard`: powered by cliphist
 - `temperature`: cpu temperatures with sensors
 - `cpu`: cpu usage in percentage

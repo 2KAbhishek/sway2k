@@ -49,7 +49,6 @@ window#waybar {
 #custom-scratchpad,
 #custom-github,
 #custom-clipboard,
-#custom-zeit,
 #custom-dnd,
 #bluetooth,
 #battery,
@@ -63,7 +62,6 @@ window#waybar {
 #idle_inhibitor,
 #backlight,
 #language,
-#custom-adaptive-light,
 #custom-sunset,
 #custom-playerctl,
 #tray {
@@ -84,10 +82,6 @@ window#waybar {
 #workspaces button.urgent {
     border-color: @error_color;
     color: @error_color;
-}
-
-#custom-zeit.tracking {
-    background-color: @warning_color;
 }
 
 #battery {

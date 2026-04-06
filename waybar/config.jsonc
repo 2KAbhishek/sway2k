@@ -300,19 +300,6 @@
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },
-    "custom/zeit": {
-        "return-type": "json",
-        "interval": "once",
-        "format": "{icon}",
-        "format-icons": {
-            "tracking": "󰖷",
-            "stopped": ""
-        },
-        "exec": "/bin/sh $HOME/.config/sway/waybar/modules/zeit.sh status",
-        "on-click": "/bin/sh $HOME/.config/sway/waybar/modules/zeit.sh click; pkill -RTMIN+10 waybar",
-        "exec-if": "[ -x \"$(command -v zeit)\" ]",
-        "signal": 10
-    },
     "custom/sunset": {
         "interval": "once",
         "tooltip": true,

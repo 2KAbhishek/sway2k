@@ -66,23 +66,18 @@ All the mentioned packages may not be available in your package manager, you mig
 - `pulsemixer`: audio manager
 - `calcurse`: calendar
 - `notify-send.sh`: notify-send alternative for notifications
-- `kvantum`/`lxappearance`/`themix`: qt / gtk theme manager - themix can be removed after BWnB gtk theme export
-  - [BWnb](https://github.com/2kabhishek/BWnb) as the theme for qt and gtk
-  - Note: You have to manually install `BWnB` using Kvantum Manager, or it will always open the manager after restart
+- `kvantum`/`lxappearance`/`themix`: qt / gtk theme manager
 - `btop`: system monitor
-- FiraCode Nerd Font
+- FiraCode, Nerd Font
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako calcurse grim jq pulsemixer wf-recorder cliphist wluma wlsunset light swappy python \
-xdg-user-dirs kvantum lxappearance ttf-firacode-nerd qutebrowser btop
+sudo pacman -S sway foot rofi waybar mako calcurse grim slurp \
+jq pulsemixer wf-recorder cliphist wlsunset swappy python btop \
+qutebrowser xdg-user-dirs kvantum lxappearance rofi-emoji \
+ttf-firacode-nerd noto-fonts-emoji ttf-roboto
+
 yay notify-send.sh themix-full-git
-
-# Debian
-sudo apt install sway foot rofi waybar mako grim calcurse jq pulsemixer wf-recorder cliphist wluma wlsunset light notify-send.sh swappy python
-
-# Fedora
-sudo dnf install kvantum lxappearance kanshi calcurse
 ```
 
 #### Recommended Configurations
@@ -107,10 +102,25 @@ ln -sfnv "$PWD/sway2k" ~/.config/sway
 
 All the configured keybindings can be found in the [keybinding manual here](./docs/keybindings.md).
 
-### Customization
+### Theming
 
-- Customize colors, icons, fonts, and more in [theme.conf](./config.d/theme.conf).
-- Customize Default apps and other definitions in [definitions.conf](config.d/definitions.conf)
+Edit [theme.conf](./config.d/theme.conf) to customize themes. This will override options selected via lxappearance.
+
+#### Themix
+
+After installing themix, find BWnB in the Contributed section, click on "Export Theme" and set the export path to `~/.themes/BWnB`
+
+> themix can be removed after BWnB gtk theme export
+
+#### Kvantum
+
+Clone [BWnb](https://github.com/2kabhishek/BWnb) to a directory. Launch Kvantum Manager and select the `BWnB/kvantum/BWnB` folder and click install.
+
+> If the theme is not installed manually, Kvantum will always open after restart.
+
+#### Icons
+
+Download [Reversal-blue Icons](https://www.pling.com/p/1340791) and extract it to `~/.icons` or install the downloaded `Reversal-blue.tar.xz` file via lxappearance.
 
 ### Waybar Modules
 

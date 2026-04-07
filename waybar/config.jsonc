@@ -14,11 +14,11 @@
     "modules-center": ["clock"],
     "modules-right": [
         "custom/wf-recorder",
-        "custom/pacman",
-        "custom/github",
         "custom/playerctl-prev",
         "custom/playerctl",
         "custom/playerctl-next",
+        "custom/pacman",
+        "custom/github",
         "backlight",
         "pulseaudio",
         "network",
@@ -251,9 +251,13 @@
     },
     "custom/playerctl-prev": {
         "interval": "once",
-        "format": "",
+        "format": "{}",
         "tooltip": false,
-        "on-click": "playerctl previous; pkill -RTMIN+5 waybar"
+        "exec": "echo ",
+        "exec-if": "playerctl metadata --format '{{status}}' >/dev/null 2>&1",
+        "signal": 5,
+        "on-click": "playerctl previous; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl position 30+; pkill -RTMIN+5 waybar"
     },
     "custom/playerctl": {
         "interval": "once",
@@ -272,9 +276,13 @@
     },
     "custom/playerctl-next": {
         "interval": "once",
-        "format": "",
+        "format": "{}",
         "tooltip": false,
-        "on-click": "playerctl next; pkill -RTMIN+5 waybar"
+        "exec": "echo ",
+        "exec-if": "playerctl metadata --format '{{status}}' >/dev/null 2>&1",
+        "signal": 5,
+        "on-click": "playerctl next; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl position 30-; pkill -RTMIN+5 waybar"
     },
     "custom/dnd": {
         "interval": "once",

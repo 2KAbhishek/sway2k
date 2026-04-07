@@ -92,7 +92,7 @@
     "bluetooth": {
         "format": "",
         "format-disabled": "󰂲",
-        "on-click": "swaymsg exec \\$bluetooth",
+        "on-click": "swaymsg exec \\$float_bluetooth",
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
     },
@@ -123,7 +123,7 @@
             "on-scroll-up": "tz_up",
             "on-scroll-down": "tz_down"
         },
-        "on-click": "swaymsg exec \\$calendar"
+        "on-click": "swaymsg exec \\$float_calendar"
     },
     "cpu": {
         "interval": 10,
@@ -132,15 +132,15 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "swaymsg exec \\$once \\$term_float btop",
+        "on-click": "swaymsg exec \\$float_btop",
         "tooltip": true
     },
     "disk": {
         "interval": 30,
         "format": " {percentage_used}%",
         "path": "/",
-        "on-click": "swaymsg exec \\$once \\$term_float ranger",
-        "on-click-middle": "swaymsg exec \\$once \\$term_float ncdu /"
+        "on-click": "swaymsg exec \\$float_ncdu",
+        "on-click-right": "swaymsg exec \\$float_ranger"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -171,7 +171,7 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "swaymsg exec \\$once \\$term_float htop",
+        "on-click": "swaymsg exec \\$float_htop",
         "tooltip": true
     },
     "network": {
@@ -183,7 +183,7 @@
         "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
         "tooltip-format-disconnected": "{icon} disconnected",
         "tooltip-format-disabled": "{icon} disabled",
-        "on-click": "swaymsg exec \\$once \\$term_float nmtui connect"
+        "on-click": "swaymsg exec \\$float_nmtui"
     },
     "pulseaudio": {
         "scroll-step": 5,
@@ -197,7 +197,7 @@
             "default": ["", "󰖀", "", "", "", ""]
         },
         "tooltip-format": "{icon}  {volume}% {format_source}",
-        "on-click": "swaymsg exec \\$pulseaudio",
+        "on-click": "swaymsg exec \\$float_pulsemixer",
         "on-click-middle": "swaymsg exec \\$volume_mute",
         "on-scroll-up": "swaymsg exec \\$volume_up",
         "on-scroll-down": "swaymsg exec \\$volume_down"
@@ -209,7 +209,7 @@
         "tooltip-format": "{temperatureC}°C",
         "format-icons": ["", "", "", "", ""],
         "tooltip": true,
-        "on-click": "swaymsg exec \"\\$once \\$term_float watch sensors\""
+        "on-click": "swaymsg exec \\$float_sensors"
     },
     "tray": {
         "icon-size": 18,
@@ -235,7 +235,7 @@
         "interval": 5,
         "exec-if": "[ $(pacman -Qu | wc -l) -gt 0 ]",
         "exec": "pacman -Qu | wc -l",
-        "on-click": "swaymsg exec \\$once \\$term_float 'sudo pacman -Syu'",
+        "on-click": "swaymsg exec \\$float_pacman",
         "signal": 4
     },
     "custom/github": {
@@ -245,7 +245,7 @@
         "format": " {}",
         "exec": "gh api '/notifications' -q '{ text: length }' | cat -",
         "exec-if": "[ -x \"$(command -v gh)\" ] && gh auth status 2>&1 | grep -q -m 1 'Logged in' && test $(gh api '/notifications' -q 'length') -ne 0",
-        "on-click": "swaymsg exec \\$once \\$term_float gh dash",
+        "on-click": "swaymsg exec \\$float_gh_dash",
         "on-click-middle": "xdg-open https://github.com/notifications && sleep 30 && pkill -RTMIN+4 waybar",
         "signal": 4
     },

@@ -50,6 +50,7 @@ All the mentioned packages may not be available in your package manager, you mig
 sudo pacman -S sway foot rofi waybar mako calcurse grim slurp \
 jq pulsemixer wf-recorder cliphist wlsunset swappy python btop \
 qutebrowser xdg-user-dirs kvantum lxappearance rofi-emoji bluetui \
+swayidle swaylock sway-contrib guvcview pcmanfm mpv imv \
 networkmanager libnotify ttf-firacode-nerd noto-fonts-emoji ttf-roboto
 
 yay themix-full-git

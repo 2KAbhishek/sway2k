@@ -25,7 +25,8 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>H/J/K/L/arrows</kbd>       | Move focused window within workspace   |
 | <kbd>Mod</kbd> + <kbd>a</kbd>                    | Window switcher                        |
 | <kbd>Mod</kbd> + <kbd>b</kbd>                    | Toggle waybar                          |
-| <kbd>Mod</kbd> + <kbd>C</kbd>                    | Reload config                          |
+| <kbd>Mod</kbd> + <kbd>c</kbd>                    | Color picker                           |
+| <kbd>Mod</kbd> + <kbd>C</kbd>                    | Edit config                            |
 | <kbd>Mod</kbd> + <kbd>d</kbd>                    | Open app launcher in empty workspace   |
 | <kbd>Mod</kbd> + <kbd>e</kbd>                    | Layout: Horizontal                     |
 | <kbd>Mod</kbd> + <kbd>E</kbd>                    | Layout: Vertical                       |
@@ -35,11 +36,12 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>M</kbd>                    | Move focused window to empty workspace |
 | <kbd>Mod</kbd> + <kbd>n</kbd>                    | Move to empty workspace                |
 | <kbd>Mod</kbd> + <kbd>N</kbd>                    | Move focused window away               |
-| <kbd>Mod</kbd> + <kbd>P</kbd>                    | Open default camera app                |
+| <kbd>Mod</kbd> + <kbd>p</kbd>                    | Focus whole workspace                  |
+| <kbd>Mod</kbd> + <kbd>P</kbd>                    | Switch focus between tiled / floating  |
 | <kbd>Mod</kbd> + <kbd>q</kbd>                    | Close focused window                   |
 | <kbd>Mod</kbd> + <kbd>Q</kbd>                    | Mode: Shutdown                         |
 | <kbd>Mod</kbd> + <kbd>r</kbd>                    | Mode: Resize                           |
-| <kbd>Mod</kbd> + <kbd>R</kbd>                    | Mode: Record                           |
+| <kbd>Mod</kbd> + <kbd>R</kbd>                    | Reload config                          |
 | <kbd>Mod</kbd> + <kbd>s</kbd>                    | Layout: Switch                         |
 | <kbd>Mod</kbd> + <kbd>S</kbd>                    | Mode: Screenshot                       |
 | <kbd>Mod</kbd> + <kbd>t</kbd>                    | Layout: Tabbed                         |
@@ -61,20 +63,16 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 
 ## Screenshot Mode
 
-| Keybinding       | Action                   |
-| ---------------- | ------------------------ |
-| <kbd>p</kbd>     | Select region to capture |
-| <kbd>o</kbd>     | Capture full screen      |
-| <kbd>P / O</kbd> | Capture with upload      |
-| <kbd>Esc</kbd>   | Exit mode                |
-
-## Record Mode
-
-| Keybinding     | Action            |
-| -------------- | ----------------- |
-| <kbd>r</kbd>   | Start recording   |
-| <kbd>R</kbd>   | Record with audio |
-| <kbd>Esc</kbd> | Exit mode         |
+| Keybinding     | Action             |
+| -------------- | ------------------ |
+| <kbd>s</kbd>   | Select and copy    |
+| <kbd>f</kbd>   | Select, copy, save |
+| <kbd>e</kbd>   | Select and edit    |
+| <kbd>o</kbd>   | Save full screen   |
+| <kbd>u</kbd>   | Capture and upload |
+| <kbd>r</kbd>   | Start recording    |
+| <kbd>a</kbd>   | Record with audio  |
+| <kbd>Esc</kbd> | Exit mode          |
 
 ## Shutdown Mode
 

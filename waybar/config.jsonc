@@ -79,7 +79,7 @@
         "on-scroll-down": "swaymsg exec \\$brightness_down"
     },
     "battery": {
-        "interval": 180,
+        "interval": 300,
         "states": {
             "warning": 30,
             "critical": 15
@@ -232,7 +232,7 @@
     },
     "custom/pacman": {
         "format": "󰮯 {}",
-        "interval": 5,
+        "interval": 3600,
         "exec-if": "[ $(pacman -Qu | wc -l) -gt 0 ]",
         "exec": "pacman -Qu | wc -l",
         "on-click": "swaymsg exec \\$float_pacman",

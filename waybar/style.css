@@ -159,6 +159,5 @@ window#waybar {
 }
 
 #custom-wf-recorder {
-    color: @error_color;
     padding-right: 8px;
 }

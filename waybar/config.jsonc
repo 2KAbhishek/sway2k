@@ -13,7 +13,6 @@
     ],
     "modules-center": ["clock"],
     "modules-right": [
-        "custom/wf-recorder",
         "custom/playerctl-prev",
         "custom/playerctl",
         "custom/playerctl-next",
@@ -22,11 +21,12 @@
         "backlight",
         "pulseaudio",
         "network",
-        "bluetooth",
         "cpu",
         "memory",
         "disk",
         "battery",
+        "custom/wf-recorder",
+        "bluetooth",
         "custom/clipboard",
         "idle_inhibitor",
         "custom/sunset",
@@ -221,13 +221,15 @@
         "tooltip": false
     },
     "custom/wf-recorder": {
-        "interval": "once",
         "return-type": "json",
-        "format": "{}",
+        "format": "{icon}",
+        "format-icons": {
+            "idle": "",
+            "recording": ""
+        },
         "tooltip-format": "{tooltip}",
-        "exec": "echo '{\"class\": \"recording\",\"text\":\"󰑊\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
-        "exec-if": "pgrep wf-recorder",
-        "on-click": "killall -s SIGINT wf-recorder",
+        "exec": "if pgrep wf-recorder >/dev/null 2>&1; then echo '{\"alt\":\"recording\",\"tooltip\":\"Recording — click to stop\"}'; else echo '{\"alt\":\"idle\",\"tooltip\":\"Click to record\"}'; fi",
+        "on-click": "$HOME/.config/sway/scripts/recorder.sh",
         "signal": 8
     },
     "custom/pacman": {

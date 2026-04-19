@@ -47,6 +47,7 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>t</kbd>                    | Layout: Tabbed                         |
 | <kbd>Mod</kbd> + <kbd>T</kbd>                    | Layout: Stacked                        |
 | <kbd>Mod</kbd> + <kbd>v</kbd>                    | Open clipboard history                 |
+| <kbd>Mod</kbd> + <kbd>V</kbd>                    | Open clipboard image viewer            |
 | <kbd>Mod</kbd> + <kbd>]</kbd>                    | Open Qutebrowser                       |
 | <kbd>Mod</kbd> + <kbd>[</kbd>                    | Open Terminal                          |
 | <kbd>Mod</kbd> + <kbd>?</kbd>                    | Show Keybindings                       |

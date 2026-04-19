@@ -23,7 +23,7 @@ if [ $status != 0 ]; then
     target_path="$(xdg-user-dir VIDEOS)/Recordings"
     timestamp=$(date +'recording_%Y%m%d-%H%M%S')
 
-    notify "Select a region to record" -t 1000
+    notify "Select a region to record, Esc for fullscreen\nPress Mod+Esc to stop recording" -t 1000
     area=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)
 
     countdown
@@ -31,10 +31,18 @@ if [ $status != 0 ]; then
 
     if [ "$1" = "-a" ]; then
         file="$target_path/$timestamp.mp4"
-        wf-recorder --audio -g "$area" --file="$file"
+        if [ -n "$area" ]; then
+            wf-recorder --audio -g "$area" --file="$file"
+        else
+            wf-recorder --audio -o "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')" --file="$file"
+        fi
     else
         file="$target_path/$timestamp.webm"
-        wf-recorder -g "$area" -c libvpx --codec-param="qmin=0" --codec-param="qmax=25" --codec-param="crf=4" --codec-param="b:v=1M" --file="$file"
+        if [ -n "$area" ]; then
+            wf-recorder -g "$area" -c libvpx --codec-param="qmin=0" --codec-param="qmax=25" --codec-param="crf=4" --codec-param="b:v=1M" --file="$file"
+        else
+            wf-recorder -o "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')" -c libvpx --codec-param="qmin=0" --codec-param="qmax=25" --codec-param="crf=4" --codec-param="b:v=1M" --file="$file"
+        fi
     fi
 
     pkill -RTMIN+8 waybar && notify "Finished recording ${file}"

@@ -20,7 +20,7 @@ Comes with a bunch of customized [waybar modules](../waybar/config.jsonc):
 - `pulseaudio`: controls audio devices
 - `network`: network connections powered by nmtui
 - `bluetooth`: bluetooth adapter controls
-- `dnd`: mako dnd integrations
+- `notification`: swaync notification center and dnd integrations
 - `tray`: system tray integration
 
 These modules share their behaviour with [tmux2k plugins](https://github.com/2kabhishek/tmux2k#-available-plugins):

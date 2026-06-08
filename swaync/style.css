@@ -1,0 +1,72 @@
+/* SwayNC Compact Black Theme */
+@define-color cc-bg #000000;
+@define-color noti-bg #000000;
+@define-color noti-border rgba(255, 255, 255, 0.12);
+@define-color text-color #eeeeee;
+@define-color accent-color #1688f0;
+
+* {
+  font-family: 'FiraCode Nerd Font', sans-serif;
+  font-size: 11px;
+}
+
+.notification {
+  background: @noti-bg;
+  border: 1px solid @accent-color;
+  border-radius: 4px;
+  color: @text-color;
+  margin: 4px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.notification-content {
+  margin: 2px;
+}
+
+.notification-default-image {
+  margin-right: 6px;
+}
+
+.control-center {
+  background: @cc-bg;
+  border: 1px solid @accent-color;
+  border-radius: 6px;
+  color: @text-color;
+  padding: 6px;
+}
+
+.control-center-header {
+  padding: 4px 6px;
+}
+
+.control-center-header > label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.control-center-header > button {
+  background: @accent-color;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.widget-dnd {
+  margin: 4px;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.widget-dnd > switch {
+  font-size: 11px;
+}
+
+.widget-mpris {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 6px;
+  margin: 4px;
+}

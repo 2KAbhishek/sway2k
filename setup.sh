@@ -8,9 +8,10 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
 
     sudo pacman -S --needed \
         base-devel bluetui btop calcurse cliphist foot grim guvcview imv jq kanshi kvantum \
-        libnotify lxappearance mako mpv networkmanager noto-fonts-emoji pcmanfm pulsemixer \
-        python qutebrowser rofi rofi-emoji slurp swappy sway sway-contrib swayidle swaylock \
-        ttf-firacode-nerd ttf-roboto waybar wdisplays wf-recorder wlsunset xdg-user-dirs xorg-xwayland
+        libnotify lxappearance mpv networkmanager noto-fonts-emoji pcmanfm pulsemixer python \
+        qutebrowser rofi rofi-emoji slurp swappy sway swaybg sway-contrib swayidle swaylock \
+        swaync swayosd ttf-firacode-nerd ttf-roboto waybar wdisplays wf-recorder wlsunset \
+        xdg-user-dirs xorg-xwayland
 
     # Run yay if available for AUR packages
     if command -v yay &>/dev/null; then
@@ -32,6 +33,7 @@ ln -sfnv "$PWD"/waybar/ ~/.config/waybar
 ln -sfnv "$PWD"/kanshi/ ~/.config/kanshi
 ln -sfnv "$PWD"/foot/ ~/.config/foot
 ln -sfnv "$PWD"/swappy/ ~/.config/swappy
+ln -sfnv "$PWD"/swaync/ ~/.config/swaync
 ln -sfnv "$PWD"/../sway2k/ ~/.config/sway
 
 echo "Setup completed successfully!"

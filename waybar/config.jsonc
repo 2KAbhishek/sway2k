@@ -30,7 +30,7 @@
         "custom/clipboard",
         "idle_inhibitor",
         "custom/sunset",
-        "custom/dnd",
+        "custom/notification",
         "tray"
     ],
     // Modules
@@ -286,18 +286,25 @@
         "on-click": "playerctl next; pkill -RTMIN+5 waybar",
         "on-click-right": "playerctl position 30-; pkill -RTMIN+5 waybar"
     },
-    "custom/dnd": {
-        "interval": "once",
-        "return-type": "json",
-        "format": "{}{icon}",
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "dnd": ""
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
         },
-        "on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
-        "on-click-right": "makoctl restore",
-        "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
-        "signal": 11
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true
     },
     "custom/clipboard": {
         "format": "",

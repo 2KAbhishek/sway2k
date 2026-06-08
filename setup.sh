@@ -34,6 +34,7 @@ ln -sfnv "$PWD"/kanshi/ ~/.config/kanshi
 ln -sfnv "$PWD"/foot/ ~/.config/foot
 ln -sfnv "$PWD"/swappy/ ~/.config/swappy
 ln -sfnv "$PWD"/swaync/ ~/.config/swaync
+ln -sfnv "$PWD"/swayosd/ ~/.config/swayosd
 ln -sfnv "$PWD"/../sway2k/ ~/.config/sway
 
 echo "Setup completed successfully!"

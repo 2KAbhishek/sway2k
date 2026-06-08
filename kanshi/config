@@ -1,0 +1,28 @@
+# Kanshi configuration
+# Automatically configures outputs depending on what is plugged in.
+#
+# Laptop screen (eDP-1): dynamically enabled to support both 1920x1200 and 1920x1080 laptops.
+# External monitors: 1080p (1920x1080), 2k (2560x1440), 4k (3840x2160)
+
+# 1. Single Screen (Laptop Only)
+profile undocked {
+    output eDP-1 enable position 0,0
+}
+
+# 2. Laptop + 4K Monitor
+profile docked-4k-hdmi {
+    output eDP-1 enable position 960,2160
+    output HDMI-A-1 enable mode 3840x2160 position 0,0
+}
+
+# 3. Laptop + 2K Monitor
+profile docked-2k-hdmi {
+    output eDP-1 enable position 320,1440
+    output HDMI-A-1 enable mode 2560x1440 position 0,0
+}
+
+# 4. Laptop + 1080p Monitor
+profile docked-1080p-hdmi {
+    output eDP-1 enable position 0,1080
+    output HDMI-A-1 enable mode 1920x1080 position 0,0
+}

@@ -47,7 +47,7 @@ All the mentioned packages may not be available in your package manager, you mig
 
 ```bash
 # Arch
-sudo pacman -S sway foot rofi waybar mako calcurse grim slurp \
+sudo pacman -S sway foot rofi waybar mako calcurse grim slurp kanshi \
 jq pulsemixer wf-recorder cliphist wlsunset swappy python btop xorg-xwayland \
 qutebrowser xdg-user-dirs kvantum lxappearance rofi-emoji bluetui wdisplays \
 swayidle swaylock sway-contrib guvcview pcmanfm mpv imv base-devel \

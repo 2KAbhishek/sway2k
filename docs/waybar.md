@@ -1,6 +1,6 @@
 # Waybar Modules
 
-Comes with a bunch of customized [waybar modules](../waybar/config.jsonc):
+Comes with a bunch of customized [waybar modules](../config/waybar/config.jsonc):
 
 - `menu`: app launcher
 - `clock`: with calendar integration
@@ -30,13 +30,3 @@ These modules share their behaviour with [tmux2k plugins](https://github.com/2ka
 - `gpu`: shows GPU usage
 - `uptime`: shows system uptime
 
----
-
-## Standalone Setup
-
-If you want to use the Waybar config by itself, you can do so by running:
-
-```bash
-# To setup waybar separately
-ln -sfnv "$PWD/waybar" ~/.config/waybar
-```

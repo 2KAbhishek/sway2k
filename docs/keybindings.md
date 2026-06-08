@@ -1,6 +1,6 @@
 # [sway2k](https://github.com/2kabhishek/sway2k) [Keybindings](https://github.com/2KAbhishek/sway2k/blob/main/docs/keybindings.md)
 
-You can find keybindings for modes in the [modes dir](config.d/modes/)
+You can find keybindings for modes in the [modes dir](../config/sway/config.d/modes/)
 
 Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/userguide.html#_default_keybindings)
 

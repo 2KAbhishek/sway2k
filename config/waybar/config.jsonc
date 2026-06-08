@@ -227,7 +227,6 @@
             "idle": "",
             "recording": ""
         },
-        "tooltip-format": "{tooltip}",
         "exec": "if pgrep wf-recorder >/dev/null 2>&1; then echo '{\"alt\":\"recording\",\"tooltip\":\"Recording — click to stop\"}'; else echo '{\"alt\":\"idle\",\"tooltip\":\"Click to record\"}'; fi",
         "on-click": "$HOME/.config/sway/scripts/recorder.sh",
         "signal": 8
@@ -325,7 +324,7 @@
             "one": "",
             "many": ""
         },
-        "exec": "$HOME/.config/sway/waybar/modules/scratchpad.sh",
+        "exec": "$HOME/.config/waybar/modules/scratchpad.sh",
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },
@@ -338,33 +337,33 @@
             "on": "",
             "off": ""
         },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/sway/waybar/modules/sunset.sh",
-        "on-click": "$HOME/.config/sway/waybar/modules/sunset.sh toggle; pkill -RTMIN+6 waybar",
-        "exec-if": "$HOME/.config/sway/waybar/modules/sunset.sh check",
+        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/waybar/modules/sunset.sh",
+        "on-click": "$HOME/.config/waybar/modules/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "exec-if": "$HOME/.config/waybar/modules/sunset.sh check",
         "signal": 6
     },
     "custom/weather": {
         "format": "{}",
         "tooltip": true,
         "interval": 3600,
-        "exec": "$HOME/.config/sway/waybar/modules/weather.sh"
+        "exec": "$HOME/.config/waybar/modules/weather.sh"
     },
     "custom/uptime": {
         "format": "{} ",
         "tooltip": true,
         "interval": 180,
-        "exec": "$HOME/.config/sway/waybar/modules/uptime.sh"
+        "exec": "$HOME/.config/waybar/modules/uptime.sh"
     },
     "custom/gpu": {
         "format": "{} ",
         "tooltip": true,
         "interval": 10,
-        "exec": "$HOME/.config/sway/waybar/modules/gpu.sh"
+        "exec": "$HOME/.config/waybar/modules/gpu.sh"
     },
     "custom/ping": {
         "format": " {}",
         "tooltip": true,
         "interval": 10,
-        "exec": "$HOME/.config/sway/waybar/modules/ping.sh"
+        "exec": "$HOME/.config/waybar/modules/ping.sh"
     }
 }

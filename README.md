@@ -68,7 +68,7 @@ All the configured keybindings can be found in the [keybinding manual here](./do
 
 ### Theming
 
-Edit [theme.conf](./config.d/theme.conf) to customize themes. This will override options selected via lxappearance.
+Edit [theme.conf](./config/sway/config.d/theme.conf) to customize themes. This will override options selected via lxappearance.
 
 #### Themix
 
@@ -88,7 +88,7 @@ Download [Reversal-blue Icons](https://www.pling.com/p/1340791) and extract it t
 
 #### Waybar
 
-Details about the customized Waybar modules and standalone setup can be found in the [here](./docs/waybar.md).
+Details about the customized Waybar modules can be found [here](./docs/waybar.md).
 
 ## Behind The Code
 

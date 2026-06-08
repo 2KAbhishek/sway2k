@@ -29,12 +29,12 @@ mkdir -p ~/Pictures/Screenshots/
 mkdir -p ~/Videos/Recordings/
 
 echo "Creating symlinks to ~/.config..."
-ln -sfnv "$PWD"/waybar/ ~/.config/waybar
-ln -sfnv "$PWD"/kanshi/ ~/.config/kanshi
-ln -sfnv "$PWD"/foot/ ~/.config/foot
-ln -sfnv "$PWD"/swappy/ ~/.config/swappy
-ln -sfnv "$PWD"/swaync/ ~/.config/swaync
-ln -sfnv "$PWD"/swayosd/ ~/.config/swayosd
-ln -sfnv "$PWD"/../sway2k/ ~/.config/sway
+ln -sfnv "$PWD"/config/foot ~/.config/foot
+ln -sfnv "$PWD"/config/kanshi ~/.config/kanshi
+ln -sfnv "$PWD"/config/swappy ~/.config/swappy
+ln -sfnv "$PWD"/config/sway ~/.config/sway
+ln -sfnv "$PWD"/config/swaync ~/.config/swaync
+ln -sfnv "$PWD"/config/swayosd ~/.config/swayosd
+ln -sfnv "$PWD"/config/waybar ~/.config/waybar
 
 echo "Setup completed successfully!"

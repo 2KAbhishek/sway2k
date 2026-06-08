@@ -73,6 +73,7 @@ window#waybar {
 #workspaces button {
     padding-left: 4px;
     padding-right: 4px;
+    color: @wm_icon_bg;
 }
 
 #workspaces button.focused {

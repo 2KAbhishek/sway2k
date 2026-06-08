@@ -41,37 +41,24 @@ My personalized configs for [sway window manager](https://swaywm.org/), minimali
 
 ### ⚡ Requirements
 
-#### Packages
-
-All the mentioned packages may not be available in your package manager, you might have to install them manually.
-
-```bash
-# Arch
-sudo pacman -S sway foot rofi waybar mako calcurse grim slurp kanshi \
-jq pulsemixer wf-recorder cliphist wlsunset swappy python btop xorg-xwayland \
-qutebrowser xdg-user-dirs kvantum lxappearance rofi-emoji bluetui wdisplays \
-swayidle swaylock sway-contrib guvcview pcmanfm mpv imv base-devel \
-networkmanager libnotify ttf-firacode-nerd noto-fonts-emoji ttf-roboto
-
-yay themix-full-git topgrade-bin --noconfirm
-```
-
-#### Recommended Configurations
-
-Highly recommended to use this alongside the following configurations:
-
-- [rofi2k](https://github.com/2kabhishek/rofi2k) as rofi config
-- [qute2k](https://github.com/2kabhishek/qute2k) as quetbrowser config
-- [dots2k](https://github.com/2kabhishek/dots2k) CLI Dev Environment
-- [nvim2k](https://github.com/2kabhishek/nvim2k) Personalized Editor
+Run [setup.sh](setup.sh) to install dependencies on Arch-based systems, or refer to it for manual installation on other distros.
 
 ### 🚀 Installation
 
 ```bash
 git clone https://github.com/2kabhishek/sway2k
 cd sway2k
-./install.sh
+./setup.sh
 ```
+
+#### Recommended Configurations
+
+Highly recommended to use this alongside the following configurations:
+
+- [dots2k](https://github.com/2kabhishek/dots2k) CLI Dev Environment
+- [nvim2k](https://github.com/2kabhishek/nvim2k) Personalized Editor
+- [rofi2k](https://github.com/2kabhishek/rofi2k) as rofi config
+- [qute2k](https://github.com/2kabhishek/qute2k) as quetbrowser config
 
 ## 💻 Usage
 

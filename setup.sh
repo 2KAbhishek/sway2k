@@ -12,14 +12,6 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
         qutebrowser rofi rofi-emoji slurp swappy sway swaybg sway-contrib swayidle swaylock \
         swaync swayosd ttf-firacode-nerd ttf-roboto waybar wdisplays wf-recorder wlsunset \
         xdg-user-dirs xorg-xwayland
-
-    # Run yay if available for AUR packages
-    if command -v yay &>/dev/null; then
-        echo "Installing AUR packages..."
-        yay -S --needed themix-full-git topgrade-bin --noconfirm
-    else
-        echo "Warning: 'yay' (AUR helper) is not installed. Please install manually from the AUR."
-    fi
 else
     echo "Warning: This script only supports package installation on Arch-based systems."
 fi
@@ -38,3 +30,4 @@ ln -sfnv "$PWD"/config/swayosd ~/.config/swayosd
 ln -sfnv "$PWD"/config/waybar ~/.config/waybar
 
 echo "Setup completed successfully!"
+echo "yay -S themix-full-git # Install themix themes, one time requirement for BWnB theme."

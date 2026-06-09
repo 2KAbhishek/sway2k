@@ -224,8 +224,8 @@
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
-            "idle": "",
-            "recording": ""
+            "idle": " ",
+            "recording": " "
         },
         "exec": "if pgrep wf-recorder >/dev/null 2>&1; then echo '{\"alt\":\"recording\",\"tooltip\":\"Recording — click to stop\"}'; else echo '{\"alt\":\"idle\",\"tooltip\":\"Click to record\"}'; fi",
         "on-click": "$HOME/.config/sway/scripts/recorder.sh",

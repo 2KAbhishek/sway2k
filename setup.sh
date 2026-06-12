@@ -7,8 +7,8 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     echo "Arch Linux detected. Preparing to install dependencies..."
 
     sudo pacman -S --needed \
-        autotiling base-devel bluetui btop calcurse cliphist dex foot grim guvcview imv jq \
-        kanshi kvantum libnotify lxappearance mpv networkmanager noto-fonts-emoji pcmanfm \
+        autotiling base-devel bc bluetui btop calcurse cliphist dex foot grim guvcview imv \
+        jq kanshi kvantum libnotify lxappearance mpv networkmanager noto-fonts-emoji pcmanfm \
         pulsemixer python qutebrowser rofi rofi-emoji slurp swappy sway swaybg sway-contrib \
         swayidle swaylock swaync swayosd ttf-firacode-nerd ttf-roboto waybar wdisplays \
         wf-recorder wlsunset xdg-user-dirs xorg-xwayland

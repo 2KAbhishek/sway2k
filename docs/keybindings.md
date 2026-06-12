@@ -10,7 +10,7 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | ------------------------------------------------ | -------------------------------------- |
 | <kbd>Esc</kbd>                                   | Close floating terminal, exit modes    |
 | <kbd>Alt</kbd> + <kbd>Tab</kbd>                  | Window switcher                        |
-| <kbd>Alt</kbd> + <kbd>Shift + +/-</kbd>          | Zoom in / Zoom out                     |
+| <kbd>Mod</kbd> + <kbd>= / -</kbd>                | Zoom in / Zoom out                     |
 | <kbd>Mod</kbd> + <kbd>Enter</kbd>                | Open Terminal                          |
 | <kbd>Mod</kbd> + <kbd>Shift + Enter / F12</kbd>  | Open Floating terminal                 |
 | <kbd>Mod</kbd> + <kbd>Space</kbd>                | Open app launcher                      |
@@ -20,6 +20,8 @@ Default keybindings are similar to [i3 keybindings](https://i3wm.org/docs/usergu
 | <kbd>Mod</kbd> + <kbd>.</kbd>                    | Open emoji panel                       |
 | <kbd>Mod</kbd> + <kbd>0-9</kbd>                  | Switch focused workspace               |
 | <kbd>Mod</kbd> + <kbd>Shift + 0-9</kbd>          | Move focused window to workspace       |
+| <kbd>Mod</kbd> + <kbd>Shift + =</kbd>            | Show / cycle scratchpad windows        |
+| <kbd>Mod</kbd> + <kbd>Shift + -</kbd>            | Move focused window to scratchpad      |
 | <kbd>Mod</kbd> + <kbd>Alt + h/j/k/l/arrows</kbd> | Move focused window between screens    |
 | <kbd>Mod</kbd> + <kbd>h/j/k/l</kbd>              | Switch focused window                  |
 | <kbd>Mod</kbd> + <kbd>H/J/K/L/arrows</kbd>       | Move focused window within workspace   |

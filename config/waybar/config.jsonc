@@ -42,7 +42,7 @@
     },
     "sway/mode": {
         "format": " {}",
-        "max-length": 50,
+        "max-length": 100,
         "tooltip": false
     },
     "sway/workspaces": {
